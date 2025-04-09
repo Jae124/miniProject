@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    private int maxHealth;
+    private int maxHealth = 100;
     [SerializeField] private int currHealth;
     public LogicScript logic;
     private float timer;
     public event Action<int, int> OnHealthChanged;
+
+    void Awake()
+    {
+        currHealth = maxHealth;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        maxHealth = 100;
-        currHealth = maxHealth;
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         OnHealthChanged?.Invoke(currHealth, maxHealth);
     }
