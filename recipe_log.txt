@@ -1,0 +1,402 @@
+commit f67be36abc5b00f9f08f1f39dba7353fc15e9a11
+Author: Anthony DiPietro <adipietro@anaconda.com>
+Date:   Wed Dec 2 16:07:36 2020 -0500
+
+    Converting version to defaults scheme.
+
+commit 1153e0dbd3931ec8cae4f6187bea084b0ebc077a
+Merge: b57eb3e 276c799
+Author: Marius van Niekerk <marius.v.niekerk@gmail.com>
+Date:   Fri Oct 9 01:39:22 2020 -0400
+
+    Merge pull request #16 from regro-cf-autotick-bot/rebuild-python39-0-2_hf609e4
+    
+    Rebuild for python39
+
+commit 276c799bd4894e83e98da5a1408ea8c473778f52
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Oct 9 04:08:27 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.3, conda-smithy 3.8.0, and conda-forge-pinning 2020.10.08.20.29.16
+
+commit e0e318be5c6128c242eaa27057c8c0409768bd97
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Fri Oct 9 04:08:16 2020 +0000
+
+    Rebuild for python39
+
+commit b57eb3e9e43f12e43b11b46dd9cafa44eadd269d
+Merge: 33d9b3b 5116355
+Author: jakirkham <jakirkham@gmail.com>
+Date:   Thu Oct 8 02:22:46 2020 -0700
+
+    Merge pull request #15 from regro-cf-autotick-bot/bot-pr_arch_he8de06
+    
+    Arch Migrator
+
+commit 5116355235879cd42dc530d26a3924a6633edc37
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Wed Oct 7 21:03:33 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.20.3, conda-smithy 3.8.0, and conda-forge-pinning 2020.10.07.20.47.11
+
+commit 143c56738d496944ca55e7c641e456ec3b7cdbb8
+Author: regro-cf-autotick-bot <36490558+regro-cf-autotick-bot@users.noreply.github.com>
+Date:   Wed Oct 7 21:03:22 2020 +0000
+
+    migration: ArchRebuild
+
+commit 33d9b3be7164c184a6f045462832da4a48e8ca88
+Merge: 3fa70c6 70c3934
+Author: Mike Sarahan <msarahan@gmail.com>
+Date:   Tue Aug 25 06:41:39 2020 -0500
+
+    Merge pull request #14 from steff456/graphics-osx
+    
+    PR: Support automatic graphic switching
+
+commit 3fa70c66e96fdc065a86188378443bf3a2ebfe06
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Sat Aug 8 16:23:51 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokenCleanup
+
+commit 70c3934dcbb2fcff1bd7967dc2382ff571eef3d3
+Author: Stephannie Jimenez <steff456@hotmail.com>
+Date:   Tue Jul 28 15:38:41 2020 -0500
+
+    Support automatic graphic switching
+
+commit f78940c5b733a42029e8c95ed98839b1278b1731
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Sun May 17 19:25:49 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CondaForgeAutomerge
+
+commit 04efb0bac2d811c1f5b0280c5c8d3ca75bbb9700
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Sun May 17 19:25:46 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration CFEP13TokensAndConfig
+
+commit 1915399dfc0cbcdaaadec1acdcdc03d57fac61ac
+Merge: 6987e4b 5240805
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Fri Mar 13 07:04:59 2020 +0100
+
+    Merge pull request #13 from regro-cf-autotick-bot/rebuild-pypy-0-1
+    
+    Rebuild for pypy
+
+commit 5240805dd7a0b48a7682f43b0f86f993fdf4f511
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Fri Mar 13 04:48:24 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.19.0, conda-smithy 3.6.12, and conda-forge-pinning 2020.03.12
+
+commit 2dbde27b9a1f0326c80017421cbd6cf88d896852
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Fri Mar 13 04:47:59 2020 +0000
+
+    Rebuild for pypy
+
+commit 6987e4b4a43b4e1f3a57a22d48e732b868e8faac
+Merge: 9dc7b21 70b7e70
+Author: Chris Barker <Chris.Barker@noaa.gov>
+Date:   Tue Mar 10 08:39:36 2020 -0700
+
+    Merge pull request #11 from hoechenberger/symlink
+    
+    Create symlink to python binary instead of copying
+
+commit 70b7e7033e6a526e2f7100d4bffb71031ca29643
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Sun Mar 8 09:38:09 2020 +0100
+
+    Bump version number
+
+commit cd590a86bc9bfed279727a3c7bd58b9550470a7c
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Sat Mar 7 13:18:48 2020 +0100
+
+    Test script improvements
+
+commit f70072032b2bb586d65d3698ac856371fafcae95
+Author: conda-forge-linter <github-actions@email.com>
+Date:   Sat Mar 7 12:09:34 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.18.12, conda-smithy 3.6.10, and conda-forge-pinning 2020.03.06
+
+commit 17d5fb9cc2f354f1457e604ab63528dadfdbaaad
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Sat Mar 7 13:07:14 2020 +0100
+
+    Update .gitignore
+
+commit f21e5b0319f69ff41b5c04f6a54f43ab08212b76
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Sat Mar 7 13:05:25 2020 +0100
+
+    Style
+
+commit c0e6d5204196b2ff6887beeeae73678ce38e3688
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Sat Mar 7 13:05:05 2020 +0100
+
+    Change OS X to macOS
+
+commit a42d65733eddcb0e3a66d72fe04c4829cb3ee480
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Sat Mar 7 13:03:50 2020 +0100
+
+    Test script wasn't run automatically
+
+commit a90bf6aaa5fd9da99506043e710774d5c2529b49
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Sat Mar 7 12:56:34 2020 +0100
+
+    Rename test script
+
+commit 6dbf21ec2ad87bf16ecbc445ebed73765f543e98
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Sat Mar 7 12:52:20 2020 +0100
+
+    Forgot to add test script to files section
+
+commit 0f0771b64cc49cbb4fc57372cf32c8db86891283
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Sat Mar 7 12:44:02 2020 +0100
+
+    Fix test script
+
+commit 3bd9d5bdc8304b1c456a88f42ea4a75db71c2d50
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Sat Mar 7 12:42:30 2020 +0100
+
+    Add small script to ensure python versions match
+
+commit be49d0298bdee094f8bd59a0b89acdcc994bafbc
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Sat Mar 7 12:11:49 2020 +0100
+
+    Create symlink to python binary instead of copyingFixes GH-8.cc @cbrnr
+
+commit 9dc7b2106a6f2ef9bf015edf086508dcfd4d20e3
+Merge: 7141d5e 98d5f26
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Fri Mar 6 23:10:27 2020 +0100
+
+    Merge pull request #10 from hoechenberger/rerender
+    
+    Rerender feedstock
+
+commit 98d5f268f9ea48250e480ae77b6e20ce104aea3b
+Author: conda-forge-linter <github-actions@email.com>
+Date:   Fri Mar 6 22:02:56 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.18.12, conda-smithy 3.6.10, and conda-forge-pinning 2020.03.06
+
+commit ba22f79d5a0f8f42ed8a056c80c9d31f65fc2450
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Fri Mar 6 23:00:25 2020 +0100
+
+    Bump build number
+
+commit 7141d5ee5e3cde63c580ab2b5aef9d10f4b453d6
+Merge: 726bce2 f91a3ee
+Author: Chris Barker <Chris.Barker@noaa.gov>
+Date:   Fri Mar 6 13:56:06 2020 -0800
+
+    Merge pull request #9 from hoechenberger/bump
+    
+    Bump build number to sync `python.app` & `python`
+
+commit f91a3ee74ed172fbcc1ede9ccf476939268090d1
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Fri Mar 6 22:54:23 2020 +0100
+
+    Update meta.yaml
+
+commit 0256f63d6438f7200fbe281bdca6411d07785ddd
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Fri Mar 6 22:48:05 2020 +0100
+
+    Fix license
+
+commit 21b0eaf4c7f9c43a3c5923d4184b46c4e3e5539f
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Fri Mar 6 22:45:54 2020 +0100
+
+    Include license file
+
+commit 77dc5aad5b998b53e4c38373d69d3b0a225a3446
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Fri Mar 6 22:45:28 2020 +0100
+
+    Rename LICENSE.txt to LICENSE
+
+commit 58404871b67f35f179bb385fca7c8a6c25eb830f
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Fri Mar 6 22:44:56 2020 +0100
+
+    Copy LICENSE.txt from python-feedstock
+
+commit 48574e6c907375f8718143c6d0cc6b54d652bf78
+Author: conda-forge-linter <github-actions@email.com>
+Date:   Fri Mar 6 21:08:56 2020 +0000
+
+    MNT: Re-rendered with conda-build 3.18.12, conda-smithy 3.6.9, and conda-forge-pinning 2020.03.06
+
+commit 1861f899c8c9ac31979139a36948afed195a098d
+Author: Richard Höchenberger <richard.hoechenberger@gmail.com>
+Date:   Fri Mar 6 22:04:27 2020 +0100
+
+    Bump build number to sync `python.app` & `python`
+    
+    Bump build number to ensure Python versions in `python.app` and `python` are the exact same. This is a temporary fix for #8.
+    
+    cc @cbrnr
+
+commit 726bce22cc1f59f8f8a1bace5e4fcba5864d6095
+Author: conda-forge-admin <conda-forge-admin@email.com>
+Date:   Tue Mar 3 00:21:57 2020 +0000
+
+    [ci skip] [skip ci] [cf admin skip] ***NO_CI*** admin migration AutomergeAndRerender
+
+commit a862da96f6a7010cb855266524fdbf8a09e9f1e3
+Merge: d19804d 3059f1f
+Author: Marius van Niekerk <marius.v.niekerk@gmail.com>
+Date:   Sat Nov 2 10:37:31 2019 -0500
+
+    Merge pull request #6 from regro-cf-autotick-bot/rebuild-python3801
+    
+    Rebuild for python38
+
+commit 3059f1f0ad0a0b2bb6f87f9a325a0c710dc1ebf3
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Fri Nov 1 16:26:42 2019 +0000
+
+    MNT: Re-rendered with conda-build 3.18.10, conda-smithy 3.6.0, and conda-forge-pinning 2019.11.01
+
+commit 61bedfb54622f9159d639eed0a50eddeebaea810
+Author: regro-cf-autotick-bot <circleci@cf-graph.regro.github.com>
+Date:   Fri Nov 1 16:26:26 2019 +0000
+
+    bump build number
+
+commit d19804d3ac6daf1668d05dbe11e26a0183acc7de
+Merge: 433575f 499b30b
+Author: Marius van Niekerk <marius.v.niekerk@gmail.com>
+Date:   Wed Dec 19 09:08:36 2018 -0500
+
+    Merge pull request #3 from carlodri/patch-1
+    
+    move to gcc7
+
+commit 499b30ba1b3dfd1827b4fae97ebc0571f4e418d6
+Author: Carlo <carlo.dri@gmail.com>
+Date:   Wed Dec 19 11:10:02 2018 +0100
+
+    correct build number
+
+commit 6261c4c6129a1f3f915576c4d70586222df386d9
+Author: Carlo <carlo.dri@gmail.com>
+Date:   Wed Dec 19 09:01:02 2018 +0100
+
+    MNT: Re-rendered with conda-smithy 3.2.2 and pinning 2018.12.18
+
+commit 7a1bc5ec640b53df3ae3b164fa5eef562d8970bb
+Author: Carlo <carlo.dri@gmail.com>
+Date:   Wed Dec 19 09:00:07 2018 +0100
+
+    add compiler to force gcc7
+
+commit 3467aa38246659eda8b5287f7d7f21e8508cb80c
+Author: Carlo <carlo.dri@gmail.com>
+Date:   Tue Dec 18 23:26:10 2018 +0100
+
+    add main channel
+
+commit 0e8d933ff3d5dcfceade6038e5488b49a12bda7a
+Author: Carlo <carlo.dri@gmail.com>
+Date:   Tue Dec 18 16:21:53 2018 +0100
+
+    MNT: Re-rendered with conda-smithy 3.2.2 and pinning 2018.12.18
+
+commit 0dcc98127130aa7f0596542470a6f43513d17aee
+Author: Carlo <carlo.dri@gmail.com>
+Date:   Tue Dec 18 16:21:05 2018 +0100
+
+    add gcc7 label
+
+commit 0c4dce2f58a89b1c9dbfbf4693b6d53fb818d0d8
+Author: Carlo <carlo.dri@gmail.com>
+Date:   Tue Dec 18 16:09:23 2018 +0100
+
+    MNT: Re-rendered with conda-smithy 3.2.2 and pinning 2018.12.18
+
+commit ec4927f56b818218509dd98b89ebb5c5e82479ce
+Author: Carlo <carlodri@users.noreply.github.com>
+Date:   Tue Dec 18 15:53:53 2018 +0100
+
+    bump build
+
+commit e0f46210ccd19763f05962f31311f279d9956ea5
+Author: Carlo <carlodri@users.noreply.github.com>
+Date:   Tue Dec 18 15:52:19 2018 +0100
+
+    move to gcc7
+
+commit 433575fcb45d178acc9c93ea634b085b7ee73fe3
+Merge: e9cf7ca 3f58008
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Sun Oct 21 11:16:39 2018 -0300
+
+    Merge pull request #2 from Korijn/leave-maintainers
+    
+    leave-maintainers
+
+commit 3f580086b4b48a503fe7b0a9fa3b638ee4b594c4
+Author: Korijn van Golen <korijn@gmail.com>
+Date:   Sun Oct 21 15:33:13 2018 +0200
+
+    Update meta.yaml
+
+commit e9cf7ca07f657747868428a09434273773fbbf59
+Merge: 6e22425 f3aa621
+Author: Filipe <ocefpaf@gmail.com>
+Date:   Tue Aug 7 12:55:40 2018 -0300
+
+    Merge pull request #1 from ocefpaf/add_py37
+    
+    Add py37
+
+commit f3aa621fec0e586e9348d63e343b474553fd7ffc
+Author: Filipe Fernandes <ocefpaf@gmail.com>
+Date:   Tue Aug 7 09:44:14 2018 -0300
+
+    MNT: Re-rendered with conda-smithy 3.1.10 and pinning 2018.08.05
+
+commit b6ee5193594e4788330dc598e2e458041cebaa21
+Author: Filipe Fernandes <ocefpaf@gmail.com>
+Date:   Tue Aug 7 09:44:12 2018 -0300
+
+    bump build number
+
+commit 6e22425cf0fe63d6176db989a522641f8ebbfb2a
+Author: Travis CI User <travis@example.org>
+Date:   Sat Aug 4 19:03:27 2018 +0000
+
+    [ci skip] [skip ci] Update anaconda token
+
+commit b0ef159c9401c6d933ea8678aa43d73006d1c54c
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Wed Oct 25 16:27:03 2017 +0000
+
+    Re-render the feedstock after CI registration.
+
+commit 21ea24d20e441992749f28b10383a4b4e1e5090f
+Author: Travis-CI on github.com/conda-forge/staged-recipes <conda-forge@googlegroups.com>
+Date:   Wed Oct 25 16:26:01 2017 +0000
+
+    Initial feedstock commit with conda-smithy 2.4.2.
