@@ -14,7 +14,7 @@ public class PlayerSpawnManager : MonoBehaviour
 
     [SerializeField]
     [Tooltip("The amount of mana required to spawn this unit.")]
-    private float manaCost = 25f; // Adjust as needed
+    private float manaCost = 2f; // Adjust as needed
 
     // References to other managers (using Singletons)
     private ManaManager manaManager;
@@ -75,6 +75,7 @@ public class PlayerSpawnManager : MonoBehaviour
 
     private void InstantiateUnit()
     {
+        Debug.Log(unitPrefab);
         if (unitPrefab != null && spawnPoint != null)
         {
             Debug.Log("Spawning Player Unit!");
