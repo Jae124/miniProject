@@ -1,12 +1,12 @@
 using System;
 using Unity.Jobs;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    private int maxHealth = 100;
+    [SerializeField] private int maxHealth = 100;
     [SerializeField] private int currHealth;
-    public LogicScript logic;
     private float timer;
     public event Action<int, int> OnHealthChanged;
 
@@ -17,7 +17,6 @@ public class Health : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         OnHealthChanged?.Invoke(currHealth, maxHealth);
     }
 
