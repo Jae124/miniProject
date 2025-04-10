@@ -8,9 +8,13 @@ public class UnitCombat : MonoBehaviour
 {
     public int attackDamage = 10;
     public float attackRate = 1.5f;
-    [SerializeField] private bool isFighting = false;
 
-    private Health targetEnemyHealth;
+    public string opponentUnitTag = "Enemy"; 
+    public string opponentBaseTag = "EnemyBase"; 
+
+    [SerializeField] private bool isFighting = false;
+    private Health targetHealth;
+
     private Health myHealth;
     private Rigidbody2D rb; // Or Rigidbody rb; for 3D
     private UnitMovement unitMovement; // Assuming you have a movement script
@@ -29,23 +33,35 @@ public class UnitCombat : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D other)
+    {   
+        Debug.Log(gameObject.name + " detected trigger/collision with: " + other.gameObject.name + " [Tag: " + other.gameObject.tag + "]");
+        HandleDetection(other.gameObject);
+    }
+
     void OnDisable()
     {
         StopFighting();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+
+    private void HandleDetection(GameObject detectedObject)
     {
-        //Debug.Log("Attempting Collision Enter on " + gameObject.name);
-        // Check if we collided with something that has Health and isn't ourselves
-        if (!isFighting && collision.gameObject != gameObject)
+        // Ignore self, or if already fighting
+        if (isFighting || detectedObject == gameObject) return;
+
+        // Check if the detected object has a tag we should attack (Unit OR Base)
+        Debug.Log(!detectedObject.CompareTag(gameObject.tag));
+
+        if (!detectedObject.CompareTag(gameObject.tag))
         {
-            Health potentialTarget = collision.gameObject.GetComponent<Health>();
-            // Optional: Check Tag as well
-            bool isSame = collision.gameObject.CompareTag(gameObject.tag); // tag check
-            
-            if (potentialTarget != null && !isSame) 
+            Debug.Log(detectedObject);
+            Health potentialTarget = detectedObject.GetComponent<Health>();
+
+            // Check if it has health and is alive
+            if (potentialTarget != null && potentialTarget.GetCurrentHealth() > 0)
             {
+                Debug.Log("Fight start");
                 StartFighting(potentialTarget);
             }
         }
@@ -56,7 +72,7 @@ public class UnitCombat : MonoBehaviour
     {
         if (isFighting)
         {
-            if (targetEnemyHealth == null || targetEnemyHealth.GetCurrentHealth() <= 0)
+            if (targetHealth == null || targetHealth.GetCurrentHealth() <= 0)
             {
                 // Target is dead or destroyed
                 StopFighting();
@@ -67,29 +83,21 @@ public class UnitCombat : MonoBehaviour
 
     void StartFighting(Health target)
     {
-        if (isFighting) return; // Already fighting someone
+        if (isFighting || target == null || target.gameObject == this.gameObject) return;
 
         isFighting = true;
-        targetEnemyHealth = target;
-        //Debug.Log(gameObject.name + " started fighting " + target.gameObject.name);
+        targetHealth = target;
+        Debug.Log($"{gameObject.name} [Tag:{gameObject.tag}] started fighting {target.gameObject.name} [Tag:{target.gameObject.tag}]");
 
-        // 1. Stop Movement
-        if (unitMovement != null)
-        {
-            unitMovement.StopMovement(); // Assumes UnitMovement has a StopMovement method
-        }
-        else
-        {
-             // Fallback: Directly stop rigidbody IF no movement script reference
-             if (rb != null)
-             {
-                 rb.linearVelocity = Vector2.zero; // Or Vector3.zero for 3D
-             }
-        }
+        // Stop Movement
+        if (unitMovement != null) unitMovement.StopMovement();
+        else if (rb != null) rb.linearVelocity = Vector2.zero; // Fallback
 
-        if (attackCoroutine != null) StopCoroutine(attackCoroutine); // Stop previous if any
+        // Start Attack Coroutine
+        if (attackCoroutine != null) StopCoroutine(attackCoroutine);
         attackCoroutine = StartCoroutine(AttackRoutine());
     }
+
 
     void StopFighting()
     {
@@ -97,6 +105,9 @@ public class UnitCombat : MonoBehaviour
 
         isFighting = false;
         //Debug.Log(gameObject.name + " stopped fighting.");
+        string previousTargetName = (targetHealth != null) ? targetHealth.gameObject.name : "Unknown";
+        Debug.Log($"{gameObject.name} stopped fighting {previousTargetName}");
+
 
         // 1. Stop Attack Coroutine
         if (attackCoroutine != null)
@@ -106,39 +117,48 @@ public class UnitCombat : MonoBehaviour
         }
 
         // 2. Resume Movement (Important!)
-        if (unitMovement != null)
-        {
-            unitMovement.StartMovement(); // Assumes UnitMovement has a StartMovement method
-        }
-        // No need for Rigidbody fallback here, movement script should handle resuming
+        if (unitMovement != null) unitMovement.StartMovement(); // Assumes UnitMovement has a StartMovement method
 
-        targetEnemyHealth = null; // Clear target reference
+        targetHealth = null; // Clear target reference
     }
 
     IEnumerator AttackRoutine()
     {
-        //Debug.Log(gameObject.name + " AttackRoutine started.");
+        if (targetHealth == null || targetHealth.GetCurrentHealth() <= 0)
+        {
+             Debug.Log($"{gameObject.name}: Target invalid at AttackRoutine start.");
+             StopFighting();
+             yield break;
+        }
+        Debug.Log($"{gameObject.name}: AttackRoutine started against {targetHealth.gameObject.name}");
+
         // Loop while we are supposed to be fighting
         while (isFighting)
         {
+            // Check target validity BEFORE waiting
+            if (targetHealth == null || targetHealth.GetCurrentHealth() <= 0) {
+                Debug.Log($"{gameObject.name}: Target invalid during AttackRoutine loop (before wait).");
+                break;
+            }
+
             // Wait for the specified interval
             yield return new WaitForSeconds(attackRate);
 
-            // Check AGAIN if target is still valid AFTER waiting
-            if (isFighting && targetEnemyHealth != null && targetEnemyHealth.GetCurrentHealth() > 0)
+            // Check target validity AGAIN AFTER waiting (and ensure still fighting)
+            if (isFighting && targetHealth != null && targetHealth.GetCurrentHealth() > 0)
             {
-                //Debug.Log(gameObject.name + " attacks " + targetEnemyHealth.gameObject.name + " for " + attackDamage + " damage.");
-                targetEnemyHealth.TakeDamage(attackDamage);
+                Debug.Log($"{gameObject.name} attacks {targetHealth.gameObject.name} for {attackDamage} damage.");
+                targetHealth.TakeDamage(attackDamage);
             }
             else
             {
                 // Target died or became invalid during the wait, stop the coroutine
-                //Debug.Log(gameObject.name + " Target invalid, stopping AttackRoutine.");
+                Debug.Log($"{gameObject.name}: Target invalid during AttackRoutine loop (after wait).");
                 // Update loop will handle calling StopFighting() formally
                 break; // Exit the while loop
             }
         }
-        //Debug.Log(gameObject.name + " AttackRoutine finished.");
+        Debug.Log(gameObject.name + " AttackRoutine finished.");
         attackCoroutine = null; // Clear coroutine reference when it ends
     }
 

@@ -6,7 +6,8 @@ TagManager:
   tags:
   - Logic
   - Enemy
-  - Base
+  - EnemyBase
+  - PlayerBase
   layers:
   - Default
   - TransparentFX
