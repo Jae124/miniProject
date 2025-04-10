@@ -31,7 +31,6 @@ public class UnitHealth : MonoBehaviour
         }
         else 
         {
-            TakeDamage(1);
             if (currHealth <= 0) {
                 Die();
             }
@@ -39,11 +38,12 @@ public class UnitHealth : MonoBehaviour
         }
     }
 
-    void TakeDamage(int attack)
+    public void TakeDamage(int attack)
     {
         currHealth -= attack;
         currHealth = Math.Max(0, currHealth);
         OnHealthChanged?.Invoke(currHealth, maxHealth);
+        if (currHealth <= 0) Die();
     }
 
     void Die(){

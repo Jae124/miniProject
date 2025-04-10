@@ -9,8 +9,6 @@ public class Health : MonoBehaviour
     [SerializeField] private int currHealth;
     private float timer;
     public event Action<int, int> OnHealthChanged;
-
-    [Tooltip("Check this box if this Health component is attached to the Player's Base.")]
     public bool isPlayerBase = false; // Add this line
 
     void Awake()
@@ -33,7 +31,6 @@ public class Health : MonoBehaviour
         }
         else 
         {
-            TakeDamage(1);
             if (currHealth <= 0) {
                 Die();
             }
@@ -41,27 +38,16 @@ public class Health : MonoBehaviour
         }
     }
 
-    void TakeDamage(int attack)
+    public void TakeDamage(int attack)
     {
         currHealth -= attack;
         currHealth = Math.Max(0, currHealth);
         OnHealthChanged?.Invoke(currHealth, maxHealth);
+        if (currHealth <= 0) Die();
     }
 
     void Die(){
-        Debug.Log("Base destroyed");
-
-        if (GameManager.Instance != null)
-        {
-            //Determine if the player won based on which base died. 
-            // if this is not the player base dying, the player wins. 
-            bool playerVictory = !isPlayerBase;
-            GameManager.Instance.GameOver(playerVictory);
-        }
-        else{
-            Debug.LogError("Cannot call GameOver: GameManager instance not found!");
-        }
-
+        Debug.Log("Unit destroyed");
         Destroy(gameObject);
     }
 
