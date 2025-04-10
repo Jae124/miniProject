@@ -10,6 +10,9 @@ public class Health : MonoBehaviour
     private float timer;
     public event Action<int, int> OnHealthChanged;
 
+    [Tooltip("Check this box if this Health component is attached to the Player's Base.")]
+    public bool isPlayerBase = false; // Add this line
+
     void Awake()
     {
         currHealth = maxHealth;
@@ -47,6 +50,18 @@ public class Health : MonoBehaviour
 
     void Die(){
         Debug.Log("Base destroyed");
+
+        if (GameManager.Instance != null)
+        {
+            //Determine if the player won based on which base died. 
+            // if this is not the player base dying, the player wins. 
+            bool playerVictory = !isPlayerBase;
+            GameManager.Instance.GameOver(playerVictory);
+        }
+        else{
+            Debug.LogError("Cannot call GameOver: GameManager instance not found!");
+        }
+
         Destroy(gameObject);
     }
 
