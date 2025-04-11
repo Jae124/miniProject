@@ -2661,7 +2661,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1620519373887045711, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4759282862864929274, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
       propertyPath: moveSpeed
@@ -2794,9 +2794,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8397867559379457425, guid: 316a6803167db4ff99a676ec2b4e01e7, type: 3}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4732204170588533758, guid: 316a6803167db4ff99a676ec2b4e01e7, type: 3}
+    - {fileID: 7924139185397520617, guid: 316a6803167db4ff99a676ec2b4e01e7, type: 3}
+    - {fileID: 3796743746354029012, guid: 316a6803167db4ff99a676ec2b4e01e7, type: 3}
+    - {fileID: 8397867559379457425, guid: 316a6803167db4ff99a676ec2b4e01e7, type: 3}
+    - {fileID: 3172337226520746963, guid: 316a6803167db4ff99a676ec2b4e01e7, type: 3}
+    - {fileID: 6525456693702148524, guid: 316a6803167db4ff99a676ec2b4e01e7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
