@@ -7,6 +7,7 @@ public class PlayerSpawnManager : MonoBehaviour
     [SerializeField]
     [Tooltip("The Player Unit Prefab to spawn.")]
     private GameObject unitPrefab; // Assign in Inspector
+    [SerializeField]private GameObject healthBarPrefab;
 
     [SerializeField]
     [Tooltip("The Transform where the unit will be spawned.")]
@@ -35,6 +36,8 @@ public class PlayerSpawnManager : MonoBehaviour
             Debug.LogError("PlayerSpawnManager: Cannot find ManaManager Instance!", this);
         if (gameManager == null)
             Debug.LogError("PlayerSpawnManager: Cannot find GameManager Instance!", this);
+        if (healthBarPrefab == null)
+            Debug.LogError("PlayerSpawnManager: Health bar not assigned!", this);
     }
 
     /// <summary>
@@ -75,11 +78,39 @@ public class PlayerSpawnManager : MonoBehaviour
 
     private void InstantiateUnit()
     {
-        Debug.Log(unitPrefab);
         if (unitPrefab != null && spawnPoint != null)
         {
             Debug.Log("Spawning Player Unit!");
-            Instantiate(unitPrefab, spawnPoint.position, spawnPoint.rotation); // Or Quaternion.identity
+            GameObject unitInstance = Instantiate(unitPrefab, spawnPoint.position, spawnPoint.rotation); // Or Quaternion.identity
+            Health unitHealth = unitInstance.GetComponent<Health>();
+
+            if (unitHealth == null)
+            {
+                Debug.LogError("Spawned unit is missing Health component!", unitInstance);
+                // Maybe destroy unitInstance here if health is critical
+                return;
+            }
+
+            // 2. Spawn the Health Bar
+            GameObject healthBarInstance = Instantiate(healthBarPrefab); // Spawn at world origin initially
+
+
+            // 3. Parent the Health Bar to the Unit
+            //    Setting worldPositionStays = false makes its position relative to the parent's origin
+            healthBarInstance.transform.SetParent(unitInstance.transform, false);
+
+            // 4. Reset Health Bar's Local Scale (optional, but good practice after parenting)
+            //healthBarInstance.transform.localScale = Vector3.one; // Or whatever scale your prefab expects locally
+
+            WorldSpaceHealthBar healthBarScript = healthBarInstance.GetComponent<WorldSpaceHealthBar>();
+            if (healthBarScript != null)
+            {
+                healthBarScript.Initialize(unitHealth); // Pass the unit's health component
+            }
+            else
+            {
+                Debug.LogError("Health Bar Prefab is missing WorldSpaceHealthBar script!", healthBarInstance);
+            }
         }
     }
 }
