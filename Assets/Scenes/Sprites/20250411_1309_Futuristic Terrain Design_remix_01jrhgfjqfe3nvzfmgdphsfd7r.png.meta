@@ -1,0 +1,730 @@
+fileFormatVersion: 2
+guid: c6a004c351c714488ba743dc69736c7b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -74898061381599620
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_0
+  - first:
+      213: -1942196588732460049
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_1
+  - first:
+      213: -3883303102364574173
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_2
+  - first:
+      213: -7658363231025289046
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_3
+  - first:
+      213: -2016263352784482494
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_4
+  - first:
+      213: 7795943761144712011
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_5
+  - first:
+      213: -8980356265200783616
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_6
+  - first:
+      213: 549454073704490279
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_7
+  - first:
+      213: -6624953225765357816
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_8
+  - first:
+      213: 7661487885187559144
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_9
+  - first:
+      213: 1939440973838255293
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_10
+  - first:
+      213: -5700419116526911486
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_11
+  - first:
+      213: -3096613613049725237
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_12
+  - first:
+      213: 8915181623662410119
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_13
+  - first:
+      213: -5766099939179104283
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_14
+  - first:
+      213: 2672272680267559835
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_15
+  - first:
+      213: -581401779105744268
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_16
+  - first:
+      213: -5360416304279752027
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_17
+  - first:
+      213: -2993813563635188345
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_18
+  - first:
+      213: 8222477046368791423
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_19
+  - first:
+      213: 4550586769204109507
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_20
+  - first:
+      213: -1613819841705481960
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_21
+  - first:
+      213: -5935256639823607081
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_22
+  - first:
+      213: 1323985684657249681
+    second: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1536
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7efbf82c98e5fef0800000000000000
+      internalID: -74898061381599620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1016
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe350a42e7eeb05e0800000000000000
+      internalID: -1942196588732460049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1014
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32e136c276cbb1ac0800000000000000
+      internalID: -3883303102364574173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_3
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 1016
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa823d5973708b590800000000000000
+      internalID: -7658363231025289046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_4
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 1016
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24f84abc92bc404e0800000000000000
+      internalID: -2016263352784482494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_5
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1016
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4b04fbcb81c03c60800000000000000
+      internalID: 7795943761144712011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_6
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 1018
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00fe0488e8d5f5380800000000000000
+      internalID: -8980356265200783616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1000
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7252c83a19d00a700800000000000000
+      internalID: 549454073704490279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_8
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1008
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8077da444207f04a0800000000000000
+      internalID: -6624953225765357816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 1000
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee2097a3a2135a60800000000000000
+      internalID: 7661487885187559144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_10
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 1008
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db487744a474aea10800000000000000
+      internalID: 1939440973838255293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_11
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 999
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2004190040b04e0b0800000000000000
+      internalID: -5700419116526911486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_12
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 1007
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bce3883535e9605d0800000000000000
+      internalID: -3096613613049725237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_13
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 1002
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789fc7ab37619bb70800000000000000
+      internalID: 8915181623662410119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_14
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 994
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7f3d9c7a2baffa0800000000000000
+      internalID: -5766099939179104283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_15
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 992
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b93345a28d1d51520800000000000000
+      internalID: 2672272680267559835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_16
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 999
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47a3f9c89227ee7f0800000000000000
+      internalID: -581401779105744268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_17
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 994
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a2713f95c9fb95b0800000000000000
+      internalID: -5360416304279752027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_18
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 1000
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d37cffc66d376d0800000000000000
+      internalID: -2993813563635188345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_19
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 983
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7b6d922f4b1c1270800000000000000
+      internalID: 8222477046368791423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_20
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 992
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0e00a7e8ee62f30800000000000000
+      internalID: 4550586769204109507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_21
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 984
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819eaa3876f8a99e0800000000000000
+      internalID: -1613819841705481960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_22
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 983
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da098c488bb1ada0800000000000000
+      internalID: -5935256639823607081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 20250411_1309_Futuristic Terrain Design_remix_01jrhgfjqfe3nvzfmgdphsfd7r_23
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 984
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19d92b527fdbf5210800000000000000
+      internalID: 1323985684657249681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
