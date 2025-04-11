@@ -48,6 +48,16 @@ public class Health : MonoBehaviour
 
     void Die(){
         Debug.Log("Unit destroyed");
+        // Check if the GameObject has the tag "EnemyBase" or "PlayerBase"
+        if (gameObject.CompareTag("EnemyBase"))
+        {
+        GameManager.Instance.GameOver(true); // Player wins if EnemyBase is destroyed
+        }
+        else if (gameObject.CompareTag("PlayerBase"))
+        {
+        GameManager.Instance.GameOver(false); // Player loses if PlayerBase is destroyed
+        }
+        
         Destroy(gameObject);
     }
 
