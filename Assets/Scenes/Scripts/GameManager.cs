@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
         // Singleton setup
         if (Instance != null && Instance != this)
         {
+            Debug.Log("here!");
             Destroy(gameObject);
         }
         else

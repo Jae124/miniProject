@@ -25,6 +25,7 @@ public class ManaManager : MonoBehaviour
         // Singleton setup
         if (Instance != null && Instance != this)
         {
+            Debug.Log("here2!");
             Destroy(gameObject); // Destroy duplicate manager
         }
         else
