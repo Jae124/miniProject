@@ -180,6 +180,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   currHealth: 0
+  damageSoundClips:
+  - {fileID: 8300000, guid: 3946719449c3c4ed9bce0233438435d9, type: 3}
+  - {fileID: 8300000, guid: 87bbe780dc9634b7880b7dff302b903a, type: 3}
+  - {fileID: 8300000, guid: 34e28389bb9734eae810d7944bfd2876, type: 3}
   isPlayerBase: 0
 --- !u!114 &4759282862864929274
 MonoBehaviour:

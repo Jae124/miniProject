@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] private int maxHealth = 100;
     [SerializeField] private int currHealth;
+    [SerializeField] private AudioClip[] damageSoundClips;
     private float timer;
     public event Action<int, int> OnHealthChanged;
     public bool isPlayerBase = false; // Add this line
@@ -43,6 +44,11 @@ public class Health : MonoBehaviour
         currHealth -= attack;
         currHealth = Math.Max(0, currHealth);
         OnHealthChanged?.Invoke(currHealth, maxHealth);
+
+        // play sound FX
+        if(gameObject.CompareTag("Enemy"))
+            SoundFXmanager.Instance.PlayRandomSoundFXClip(damageSoundClips, transform, 0.5f);
+
         if (currHealth <= 0) Die();
     }
 
