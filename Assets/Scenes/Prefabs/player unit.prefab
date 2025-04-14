@@ -181,6 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   currHealth: 0
+  damageSoundClips: []
   isPlayerBase: 0
 --- !u!114 &7924139185397520617
 MonoBehaviour:

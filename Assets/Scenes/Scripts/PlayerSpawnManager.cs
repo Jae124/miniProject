@@ -1,21 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI; // Required if you want button interaction feedback later
+using System.Collections.Generic;
 
 public class PlayerSpawnManager : MonoBehaviour
 {
     [Header("Spawning Configuration")]
     [SerializeField]
     [Tooltip("The Player Unit Prefab to spawn.")]
-    private GameObject unitPrefab; // Assign in Inspector
-    [SerializeField] private GameObject healthBarPrefab;
+    private List<GameObject> spawnableUnitPrefabs = new List<GameObject>(); // Assign in Inspector
+    
 
     [SerializeField]
     [Tooltip("The Transform where the unit will be spawned.")]
     private Transform spawnPoint; // Assign PlayerSpawnPoint GameObject in Inspector
+    [SerializeField] private GameObject healthBarPrefab;
 
     [SerializeField]
     [Tooltip("The amount of mana required to spawn this unit.")]
-    private float manaCost = 2f; // Adjust as needed
+    //private float manaCost = 2f; // Adjust as needed
+    private List<float> manaCost = new List<float>();
 
     // References to other managers (using Singletons)
     private ManaManager manaManager;
@@ -28,8 +31,6 @@ public class PlayerSpawnManager : MonoBehaviour
         gameManager = GameManager.Instance;
 
         // Error checking for setup
-        if (unitPrefab == null)
-            Debug.LogError("PlayerSpawnManager: Unit Prefab not assigned!", this);
         if (spawnPoint == null)
             Debug.LogError("PlayerSpawnManager: Spawn Point not assigned!", this);
         if (manaManager == null)
@@ -43,7 +44,7 @@ public class PlayerSpawnManager : MonoBehaviour
     /// <summary>
     /// Method to be called by the UI Button's OnClick event.
     /// </summary>
-    public void SpawnUnit()
+    public void SpawnUnit(int unitIndex)
     {
         // Don't allow spawning if game is over
         if (gameManager != null && gameManager.IsGameOver)
@@ -52,14 +53,15 @@ public class PlayerSpawnManager : MonoBehaviour
             return;
         }
 
+
         // Check if ManaManager exists and if enough mana is available
-        if (manaManager != null && manaManager.HasEnoughMana(manaCost))
+        if (manaManager != null && manaManager.HasEnoughMana(manaCost[unitIndex]))
         {
             // Try to spend the mana
-            if (manaManager.SpendMana(manaCost))
+            if (manaManager.SpendMana(manaCost[unitIndex]))
             {
                 // Mana spent successfully, now instantiate the unit
-                InstantiateUnit();
+                InstantiateUnit(unitIndex);
             }
             else
             {
@@ -76,8 +78,16 @@ public class PlayerSpawnManager : MonoBehaviour
         }
     }
 
-    private void InstantiateUnit()
+    private void InstantiateUnit(int unitIndex)
     {
+        if (unitIndex < 0 || unitIndex >= spawnableUnitPrefabs.Count)
+        {
+            Debug.LogError($"Spawner: Invalid unit index {unitIndex}. Max index is {spawnableUnitPrefabs.Count - 1}.");
+            return;
+        }
+
+        GameObject unitPrefab = spawnableUnitPrefabs[unitIndex];
+
         if (unitPrefab != null && spawnPoint != null)
         {
             Debug.Log("Spawning Player Unit!");

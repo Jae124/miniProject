@@ -350,11 +350,11 @@ MonoBehaviour:
       - m_Target: {fileID: 879090397}
         m_TargetAssemblyTypeName: PlayerSpawnManager, Assembly-CSharp
         m_MethodName: SpawnUnit
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1199,7 +1199,7 @@ MonoBehaviour:
       - m_Target: {fileID: 879090397}
         m_TargetAssemblyTypeName: PlayerSpawnManager, Assembly-CSharp
         m_MethodName: SpawnUnit
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2550,10 +2550,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2e65c0e876e4f83a6f8d3710e97749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitPrefab: {fileID: 3256910323006174674, guid: 316a6803167db4ff99a676ec2b4e01e7, type: 3}
-  healthBarPrefab: {fileID: 6423492838854205832, guid: 9fb270a2902fb473aa0faf9c29eedb70, type: 3}
+  spawnableUnitPrefabs:
+  - {fileID: 6972876825996394554, guid: 78a3781dbe6af4d688afcb41fa93e311, type: 3}
+  - {fileID: 5018865869582436190, guid: d3fe2a0a30f5d4a57baa9ae6c75a5b7f, type: 3}
+  - {fileID: 177616267987920023, guid: 72f214ac602d3483e9853e6c759ebe88, type: 3}
   spawnPoint: {fileID: 1156661778}
-  manaCost: 2
+  healthBarPrefab: {fileID: 6423492838854205832, guid: 9fb270a2902fb473aa0faf9c29eedb70, type: 3}
+  manaCost:
+  - 10
+  - 20
+  - 30
 --- !u!4 &879090398
 Transform:
   m_ObjectHideFlags: 0
@@ -3737,7 +3743,7 @@ GameObject:
   - component: {fileID: 1411122656}
   - component: {fileID: 1411122655}
   m_Layer: 5
-  m_Name: SpawnShieldButton (1)
+  m_Name: SpawnBazookaButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3810,11 +3816,11 @@ MonoBehaviour:
       - m_Target: {fileID: 879090397}
         m_TargetAssemblyTypeName: PlayerSpawnManager, Assembly-CSharp
         m_MethodName: SpawnUnit
-        m_Mode: 1
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -4618,7 +4624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8504775736820553605, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
   spawnPoint: {fileID: 491623885}
-  spawnInterval: 5
+  spawnInterval: 10
 --- !u!61 &1725798602
 BoxCollider2D:
   m_ObjectHideFlags: 0
