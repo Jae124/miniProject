@@ -24,6 +24,14 @@ public class StartMenuManager : MonoBehaviour
         // SceneManager.LoadSceneAsync(gameSceneName); // Use this for loading screens
     }
 
-    
+    public void QuitGame()
+    {
+        Debug.Log("Quit Game Requested!");
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+    }
 
 }
