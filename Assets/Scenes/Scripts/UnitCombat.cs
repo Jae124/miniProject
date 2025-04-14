@@ -96,29 +96,6 @@ public class UnitCombat : MonoBehaviour
         }
     }
 
-
-    private void HandleDetection(GameObject detectedObject)
-    {
-        // Ignore self, or if already fighting
-        if (isFighting || detectedObject == gameObject) return;
-
-        // Check if the detected object has a tag we should attack (Unit OR Base)
-        Debug.Log(!detectedObject.CompareTag(gameObject.tag));
-
-        if (!detectedObject.CompareTag(gameObject.tag))
-        {
-            Debug.Log(detectedObject);
-            Health potentialTarget = detectedObject.GetComponent<Health>();
-
-            // Check if it has health and is alive
-            if (potentialTarget != null && potentialTarget.GetCurrentHealth() > 0)
-            {
-                Debug.Log("Fight start");
-                StartFighting(potentialTarget);
-            }
-        }
-    }
-
     void Update()
     {
         if (isFighting) // --- If currently in combat ---

@@ -4624,7 +4624,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8504775736820553605, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
   spawnPoint: {fileID: 491623885}
-  spawnInterval: 10
+  spawnInterval: 5
 --- !u!61 &1725798602
 BoxCollider2D:
   m_ObjectHideFlags: 0

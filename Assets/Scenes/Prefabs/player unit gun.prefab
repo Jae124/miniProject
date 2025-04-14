@@ -86,7 +86,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4732204170588533758, guid: 316a6803167db4ff99a676ec2b4e01e7, type: 3}
       propertyPath: attackRange
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6525456693702148524, guid: 316a6803167db4ff99a676ec2b4e01e7, type: 3}
       propertyPath: m_Size.x

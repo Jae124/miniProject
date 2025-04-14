@@ -198,6 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  targetTransform: {fileID: 0}
 --- !u!114 &7898492522177612576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,8 +213,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 10
   attackRate: 1.5
-  opponentUnitTag: Enemy
-  opponentBaseTag: EnemyBase
+  attackRange: 1.5
+  opponentUnitTag: Player
+  opponentBaseTag: PlayerBase
   isFighting: 0
 --- !u!61 &4043057359008683161
 BoxCollider2D:

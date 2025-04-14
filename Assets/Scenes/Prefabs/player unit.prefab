@@ -165,7 +165,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 2, y: 0.16}
   m_EdgeRadius: 0
 --- !u!114 &3796743746354029012
 MonoBehaviour:
@@ -196,6 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
+  targetTransform: {fileID: 0}
 --- !u!114 &4732204170588533758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,6 +211,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 10
   attackRate: 1.5
+  attackRange: 1.5
   opponentUnitTag: Enemy
   opponentBaseTag: EnemyBase
   isFighting: 0
