@@ -8,7 +8,6 @@ public class PlayerSpawnManager : MonoBehaviour
     [SerializeField]
     [Tooltip("The Player Unit Prefab to spawn.")]
     private List<GameObject> spawnableUnitPrefabs = new List<GameObject>(); // Assign in Inspector
-    
 
     [SerializeField]
     [Tooltip("The Transform where the unit will be spawned.")]
