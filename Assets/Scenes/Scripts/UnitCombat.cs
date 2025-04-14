@@ -8,6 +8,8 @@ public class UnitCombat : MonoBehaviour
 {
     public int attackDamage = 10;
     public float attackRate = 1.5f;
+    [Tooltip("How close the unit needs to be to the target to stop moving and start attacking.")]
+    public float attackRange = 1.5f;
 
     public string opponentUnitTag = "Enemy"; 
     public string opponentBaseTag = "EnemyBase"; 
@@ -19,7 +21,7 @@ public class UnitCombat : MonoBehaviour
     private Rigidbody2D rb; // Or Rigidbody rb; for 3D
     private UnitMovement unitMovement; // Assuming you have a movement script
     private Coroutine attackCoroutine;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Transform currentTargetTransform; // Store the target's transform for distance checks
 
     void Awake()
     {
@@ -35,13 +37,63 @@ public class UnitCombat : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {   
-        Debug.Log(gameObject.name + " detected trigger/collision with: " + other.gameObject.name + " [Tag: " + other.gameObject.tag + "]");
-        HandleDetection(other.gameObject);
+        //Debug.Log(gameObject.name + " detected trigger/collision with: " + other.gameObject.name + " [Tag: " + other.gameObject.tag + "]");
+        HandlePotentialTarget(other.gameObject);
     }
+
+    void OnTriggerStay2D(Collider2D other)
+     {
+         // Only try to acquire a new target if we aren't already fighting
+         // and don't currently have a valid target transform assigned
+         if (!isFighting && currentTargetTransform == null)
+         {
+             HandlePotentialTarget(other.gameObject);
+         }
+     }
+
+     void OnTriggerExit2D(Collider2D other) {
+         if (currentTargetTransform != null && other.transform == currentTargetTransform) {
+             // If the object leaving IS our current target, clear it
+             // This doesn't stop combat immediately if already fighting, Update handles range check.
+             Debug.Log($"{gameObject.name} target {other.name} exited trigger range.");
+             currentTargetTransform = null;
+              // Optionally, if NOT fighting, tell movement script target is gone
+              if (!isFighting && unitMovement != null) {
+                  unitMovement.ClearTarget(); // Assumes UnitMovement has ClearTarget method
+              }
+         }
+     }
 
     void OnDisable()
     {
         StopFighting();
+    }
+
+    private void HandlePotentialTarget(GameObject detectedObject)
+    {
+        // Ignore self, or if we ALREADY have a target we are pursuing/fighting
+        // We only acquire the *first* valid target we detect for simplicity now.
+        if (currentTargetTransform != null || detectedObject == gameObject) return;
+
+        // Check if the detected object is a valid opponent
+        if (detectedObject.CompareTag(opponentUnitTag) || detectedObject.CompareTag(opponentBaseTag))
+        {
+            Health potentialTarget = detectedObject.GetComponent<Health>();
+
+            // Check if it has health and is alive
+            if (potentialTarget != null && potentialTarget.GetCurrentHealth() > 0)
+            {
+                // Found a potential target! Store its transform.
+                currentTargetTransform = detectedObject.transform;
+                 Debug.Log($"{gameObject.name} acquired potential target: {currentTargetTransform.name}");
+
+                // Tell the movement script to move towards this target
+                if (unitMovement != null)
+                {
+                    unitMovement.SetTarget(currentTargetTransform); // Assumes UnitMovement has SetTarget
+                }
+            }
+        }
     }
 
 
@@ -67,99 +119,159 @@ public class UnitCombat : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (isFighting)
+        if (isFighting) // --- If currently in combat ---
         {
+            // 1. Check if target died or was destroyed
             if (targetHealth == null || targetHealth.GetCurrentHealth() <= 0)
             {
-                // Target is dead or destroyed
+                Debug.Log($"{gameObject.name}: Target {currentTargetTransform?.name ?? "Unknown"} died or was destroyed. Stopping fight.");
                 StopFighting();
+                return; // Exit update for this frame
             }
-        } 
-        
+
+            // 2. Check if target moved OUT of attack range
+            float distanceToTarget = Vector2.Distance(transform.position, currentTargetTransform.position);
+            if (distanceToTarget > attackRange)
+            {
+                 Debug.Log($"{gameObject.name}: Target {currentTargetTransform.name} moved out of range ({distanceToTarget} > {attackRange}). Stopping fight.");
+                StopFighting();
+                // Note: Movement will resume automatically because StopFighting calls StartMovement
+            }
+        }
+        else // --- If NOT currently in combat ---
+        {
+            // Check if we have a valid potential target assigned
+            if (currentTargetTransform != null)
+            {
+                // Check if the potential target died before we engaged
+                 Health potentialTargetHealth = currentTargetTransform.GetComponent<Health>(); // Get health again in case it changed
+                 if(potentialTargetHealth == null || potentialTargetHealth.GetCurrentHealth() <= 0) {
+                      Debug.Log($"{gameObject.name}: Potential target {currentTargetTransform.name} died before engagement. Clearing target.");
+                      ClearCurrentTarget(); // Clear target if it's dead
+                      return; // Exit update
+                 }
+
+                // Check if the potential target is NOW in attack range
+                float distanceToTarget = Vector2.Distance(transform.position, currentTargetTransform.position);
+                 // Debug.Log($"{gameObject.name}: Distance to {currentTargetTransform.name} = {distanceToTarget}. Attack range = {attackRange}"); // Spammy log for debugging distance
+                if (distanceToTarget <= attackRange)
+                {
+                    // Engage!
+                    StartFighting(potentialTargetHealth); // Start fighting this target
+                }
+                // else: Keep moving towards it (handled by UnitMovement)
+            }
+            // else: No target, keep moving based on UnitMovement's default behavior (if any)
+        }
     }
 
     void StartFighting(Health target)
     {
+        // Basic checks
         if (isFighting || target == null || target.gameObject == this.gameObject) return;
 
         isFighting = true;
-        targetHealth = target;
-        Debug.Log($"{gameObject.name} [Tag:{gameObject.tag}] started fighting {target.gameObject.name} [Tag:{target.gameObject.tag}]");
+        targetHealth = target; // Store the health component of the engaged target
+        currentTargetTransform = target.transform; // Ensure currentTargetTransform is set
+
+        Debug.Log($"{gameObject.name} [Tag:{gameObject.tag}] ENGAGING {target.gameObject.name} [Tag:{target.gameObject.tag}] at range.");
 
         // Stop Movement
         if (unitMovement != null) unitMovement.StopMovement();
-        else if (rb != null) rb.linearVelocity = Vector2.zero; // Fallback
+        else if (rb != null) rb.linearVelocity = Vector2.zero;
 
         // Start Attack Coroutine
         if (attackCoroutine != null) StopCoroutine(attackCoroutine);
         attackCoroutine = StartCoroutine(AttackRoutine());
     }
 
-
     void StopFighting()
     {
-        if (!isFighting) return; // Weren't fighting anyway
-
+        if (!isFighting) return;
         isFighting = false;
-        //Debug.Log(gameObject.name + " stopped fighting.");
-        string previousTargetName = (targetHealth != null) ? targetHealth.gameObject.name : "Unknown";
+        string previousTargetName = (currentTargetTransform != null) ? currentTargetTransform.name : ((targetHealth != null) ? targetHealth.gameObject.name : "Unknown");
         Debug.Log($"{gameObject.name} stopped fighting {previousTargetName}");
 
-
-        // 1. Stop Attack Coroutine
         if (attackCoroutine != null)
         {
             StopCoroutine(attackCoroutine);
             attackCoroutine = null;
         }
+        // Do NOT clear currentTargetTransform here IF the target is still alive but just out of range.
+        // The unit should resume moving towards it.
+        // Only clear the target if it's dead or gone (handled in Update or OnTriggerExit)
 
-        // 2. Resume Movement (Important!)
-        if (unitMovement != null) unitMovement.StartMovement(); // Assumes UnitMovement has a StartMovement method
+        // Resume Movement (UnitMovement will use currentTargetTransform if it's still set)
+        if (unitMovement != null) unitMovement.StartMovement();
 
-        targetHealth = null; // Clear target reference
+        targetHealth = null; // Clear the specific health component we were attacking
+    }
+
+    // --- Helper to fully clear target ---
+    private void ClearCurrentTarget() {
+        currentTargetTransform = null;
+        targetHealth = null; // Ensure combat target is also cleared
+        if(unitMovement != null) {
+            unitMovement.ClearTarget(); // Tell movement script target is gone
+        }
     }
 
     IEnumerator AttackRoutine()
     {
-        if (targetHealth == null || targetHealth.GetCurrentHealth() <= 0)
+        // Renamed target parameter to avoid conflict with class member
+        Health initialTarget = targetHealth; // Use the currently set targetHealth
+
+        if (initialTarget == null || initialTarget.GetCurrentHealth() <= 0)
         {
              Debug.Log($"{gameObject.name}: Target invalid at AttackRoutine start.");
-             StopFighting();
+             // Update loop should handle calling StopFighting(), just exit coroutine
              yield break;
         }
-        Debug.Log($"{gameObject.name}: AttackRoutine started against {targetHealth.gameObject.name}");
+        Debug.Log($"{gameObject.name}: AttackRoutine started against {initialTarget.gameObject.name}");
 
-        // Loop while we are supposed to be fighting
-        while (isFighting)
+        while (isFighting) // Loop while the UNIT is in fighting state
         {
-            // Check target validity BEFORE waiting
-            if (targetHealth == null || targetHealth.GetCurrentHealth() <= 0) {
-                Debug.Log($"{gameObject.name}: Target invalid during AttackRoutine loop (before wait).");
-                break;
-            }
+            // Check if the target we are locked onto (targetHealth) is still valid
+             if (targetHealth == null || targetHealth.GetCurrentHealth() <= 0)
+             {
+                 Debug.Log($"{gameObject.name}: Target {initialTarget.gameObject.name} became invalid during AttackRoutine loop (before wait).");
+                 break; // Exit loop, Update will call StopFighting
+             }
 
-            // Wait for the specified interval
+            // We don't necessarily need to re-check range *within* the attack loop,
+            // as the Update loop handles stopping combat if range is broken.
+            // But we could add an optional check here for responsiveness.
+
             yield return new WaitForSeconds(attackRate);
 
-            // Check target validity AGAIN AFTER waiting (and ensure still fighting)
+            // Check target validity AGAIN AFTER waiting (and ensure still fighting state)
             if (isFighting && targetHealth != null && targetHealth.GetCurrentHealth() > 0)
             {
-                Debug.Log($"{gameObject.name} attacks {targetHealth.gameObject.name} for {attackDamage} damage.");
-                targetHealth.TakeDamage(attackDamage);
+                // Ensure we are still in attack range (Optional check for robustness)
+                // float distance = Vector2.Distance(transform.position, targetHealth.transform.position);
+                // if (distance <= attackRange) {
+                    Debug.Log($"{gameObject.name} attacks {targetHealth.gameObject.name} for {attackDamage} damage.");
+                    targetHealth.TakeDamage(attackDamage);
+                // } else {
+                //    Debug.Log($"{gameObject.name} target {targetHealth.gameObject.name} moved out of range during attack windup.");
+                //    // Don't break here, let Update handle StopFighting to resume movement
+                // }
             }
             else
             {
-                // Target died or became invalid during the wait, stop the coroutine
-                Debug.Log($"{gameObject.name}: Target invalid during AttackRoutine loop (after wait).");
-                // Update loop will handle calling StopFighting() formally
-                break; // Exit the while loop
+                 // Check if we stopped fighting during the yield
+                 if (!isFighting) {
+                     Debug.Log($"{gameObject.name}: Stopped fighting during AttackRoutine yield.");
+                 } else {
+                     Debug.Log($"{gameObject.name}: Target {initialTarget.gameObject.name} became invalid during AttackRoutine loop (after wait).");
+                 }
+                 break; // Exit loop, Update will call StopFighting if needed
             }
         }
-        Debug.Log(gameObject.name + " AttackRoutine finished.");
-        attackCoroutine = null; // Clear coroutine reference when it ends
+        Debug.Log($"{gameObject.name}: AttackRoutine finished for target {initialTarget.gameObject.name}.");
+        attackCoroutine = null;
     }
 
 }
