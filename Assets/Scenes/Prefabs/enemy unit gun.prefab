@@ -8,6 +8,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1620519373887045711, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620519373887045711, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620519373887045711, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620519373887045711, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620519373887045711, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620519373887045711, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043057359008683161, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043057359008683161, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043057359008683161, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043057359008683161, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043057359008683161, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043057359008683161, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580681275343901137, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 490842205202310979, guid: d6e14931cf2e94ad1aa6bb59b73b27c5, type: 3}
     - target: {fileID: 6839983738615192538, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8504775736820553605, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
       propertyPath: m_Name
-      value: enemy unit
+      value: enemy unit gun
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

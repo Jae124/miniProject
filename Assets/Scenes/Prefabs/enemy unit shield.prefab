@@ -8,6 +8,58 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1620519373887045711, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620519373887045711, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620519373887045711, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620519373887045711, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620519373887045711, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1620519373887045711, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043057359008683161, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043057359008683161, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043057359008683161, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043057359008683161, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043057359008683161, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043057359008683161, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.34
+      objectReference: {fileID: 0}
+    - target: {fileID: 4580681275343901137, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1553940418269799609, guid: cf4969ad02ba14643b393461904b4c24, type: 3}
     - target: {fileID: 4759282862864929274, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
       propertyPath: moveSpeed
       value: 1

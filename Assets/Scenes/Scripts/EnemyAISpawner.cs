@@ -60,25 +60,13 @@ public class EnemyAISpawner : MonoBehaviour
         Debug.Log($"Starting Wave {waveNumber}");
 
         // --- EXAMPLE: Spawn different enemies based on wave ---
-        int enemiesToSpawn = 2 + waveNumber; // Simple increasing difficulty
 
-        for (int i = 0; i < enemiesToSpawn; i++)
-        {
-            // --- Logic to CHOOSE which enemy type ---
-            int enemyIndex = 0; // Default to the first enemy (e.g., Grunt)
+        // --- Logic to CHOOSE which enemy type ---
+        int enemyIndex = Random.Range(0, 3); // Default to the first enemy (e.g., Grunt)
 
-            if (waveNumber > 1 && Random.Range(0, 3) == 0 && enemyPrefabs.Count > 1) // 1/3 chance for Ranger after wave 1
-            {
-                enemyIndex = 1;
-            }
-            if (waveNumber > 2 && Random.Range(0, 5) == 0 && enemyPrefabs.Count > 2) // 1/5 chance for Brute after wave 2
-            {
-                enemyIndex = 2;
-            }
-            // Add more complex logic here based on wave data, etc.
+        // Add more complex logic here based on wave data, etc.
 
-            SpawnEnemyByIndex(enemyIndex);
-        }
+        SpawnEnemyByIndex(enemyIndex);
     }
 
     public void SpawnEnemyByIndex(int index)
