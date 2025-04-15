@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4759282862864929274, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: moveSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6839983738615192538, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -48,9 +52,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7898492522177612576, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: attackRange
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898492522177612576, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
+      propertyPath: attackDamage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8504775736820553605, guid: c705bf3020166406b8958d4c15b43a38, type: 3}
       propertyPath: m_Name
-      value: enemy unit
+      value: enemy unit bazooka
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
