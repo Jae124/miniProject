@@ -6,7 +6,9 @@ using System.Collections;
 [RequireComponent(typeof(Collider2D))]
 public class UnitCombat : MonoBehaviour
 {
-    public int attackDamage = 10;
+    [SerializeField] private int baseAttackDamage = 10;
+    [SerializeField] private float damageMultiplier = 0.15f; // 15% more damage
+    [SerializeField] private int attackDamage = 10;
     public float attackRate = 1.5f;
     [Tooltip("How close the unit needs to be to the target to stop moving and start attacking.")]
     public float attackRange = 1.5f;
@@ -23,11 +25,19 @@ public class UnitCombat : MonoBehaviour
     private Coroutine attackCoroutine;
     private Transform currentTargetTransform; // Store the target's transform for distance checks
 
+    public void InitializeForStage(int stageDifficulty)
+    {
+        float multiplier = 1.0f + (damageMultiplier * (stageDifficulty - 1));
+        attackDamage = Mathf.RoundToInt(baseAttackDamage * multiplier);
+        // Debug.Log($"{gameObject.name} initialized for Stage Difficulty {stageDifficulty} with Attack: {attackDamage}");
+    }
+
     void Awake()
     {
         myHealth = GetComponent<Health>();
         rb = GetComponent<Rigidbody2D>();
         unitMovement = GetComponent<UnitMovement>(); 
+        attackDamage = baseAttackDamage;
 
         if (unitMovement == null)
         {

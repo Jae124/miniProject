@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class StartMenuManager : MonoBehaviour
 {
     [Tooltip("The exact name of the game scene file to load")]
-    public string gameSceneName = "SampleScene";
+    public string gameSceneName = "StageScene";
 
     public void StartGame()
     {

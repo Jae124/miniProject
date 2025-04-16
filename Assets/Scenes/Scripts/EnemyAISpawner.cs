@@ -18,9 +18,11 @@ public class EnemyAISpawner : MonoBehaviour
     private float timer = 0f;// Internal timer
     private GameManager gameManager; // Reference to game manager
     private int waveNumber = 0;
+    private int stageDifficulty;
 
     void Start()
     {
+        stageDifficulty = SelectedStageInfo.SelectedDifficulty;
         gameManager = GameManager.Instance;
 
         // Error checking
@@ -88,6 +90,11 @@ public class EnemyAISpawner : MonoBehaviour
 
         GameObject enemyInstance = Instantiate(specificEnemyPrefab, spawnPoint.position, spawnPoint.rotation); // Use spawn point's rotation often
         Health enemyHealth = enemyInstance.GetComponent<Health>();
+        UnitCombat enemyCombat = enemyInstance.GetComponent<UnitCombat>();
+
+        if (enemyHealth != null) enemyHealth.InitializeForStage(stageDifficulty);
+        if (enemyCombat != null) enemyCombat.InitializeForStage(stageDifficulty);
+
         if (enemyHealth == null) { Debug.LogError("Spawned enemy missing Health script!", enemyInstance); return; }
         Debug.Log($"Spawned '{enemyInstance.name}'");
 
