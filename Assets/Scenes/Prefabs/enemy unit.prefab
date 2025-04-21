@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4759282862864929274}
   - component: {fileID: 7898492522177612576}
   - component: {fileID: 4043057359008683161}
+  - component: {fileID: 2430836912811280718}
   m_Layer: 6
   m_Name: enemy unit
   m_TagString: Enemy
@@ -178,7 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0d64454c79104af580ed23e0694f404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  healthMultiplier: 0.2
+  baseMaxHealth: 100
   currHealth: 0
   damageSoundClips:
   - {fileID: 8300000, guid: 3946719449c3c4ed9bce0233438435d9, type: 3}
@@ -211,6 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859dc804a464940a092e6f9371622199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseAttackDamage: 10
+  damageMultiplier: 0.15
   attackDamage: 10
   attackRate: 1.5
   attackRange: 1.5
@@ -263,3 +267,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.15, y: 0.2}
   m_EdgeRadius: 0
+--- !u!95 &2430836912811280718
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8504775736820553605}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e857ea7994eec4816ab7da81670ffc02, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

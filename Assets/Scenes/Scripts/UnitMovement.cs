@@ -45,7 +45,7 @@ public class UnitMovement : MonoBehaviour
              // Threshold helps ignore tiny drifts or physics jitter
              if (rb.linearVelocity.sqrMagnitude > 0.01f) // Use squared magnitude for efficiency
              {
-                 isCurrentlyMoving = true;
+                isCurrentlyMoving = true;
              }
         }
 

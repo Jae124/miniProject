@@ -235,8 +235,6 @@ public class UnitCombat : MonoBehaviour
             // as the Update loop handles stopping combat if range is broken.
             // But we could add an optional check here for responsiveness.
 
-            yield return new WaitForSeconds(attackRate);
-
             // Check target validity AGAIN AFTER waiting (and ensure still fighting state)
             if (isFighting && targetHealth != null && targetHealth.GetCurrentHealth() > 0)
             {
@@ -245,8 +243,6 @@ public class UnitCombat : MonoBehaviour
                     animator.SetTrigger("Attack"); // Use the EXACT name of the trigger parameter
                      Debug.Log($"{gameObject.name}: Set Attack Trigger");
                 }
-
-                yield return new WaitForSeconds(0.2f); // Example delay
 
                 // Deal Damage (check target again after potential delay)
                  if (isFighting && targetHealth != null && targetHealth.GetCurrentHealth() > 0) {
@@ -260,7 +256,9 @@ public class UnitCombat : MonoBehaviour
                 //    Debug.Log($"{gameObject.name} target {targetHealth.gameObject.name} moved out of range during attack windup.");
                 //    // Don't break here, let Update handle StopFighting to resume movement
                 // }
+                yield return new WaitForSeconds(0.2f); // Example delay
             }
+        
             else
             {
                  // Check if we stopped fighting during the yield
