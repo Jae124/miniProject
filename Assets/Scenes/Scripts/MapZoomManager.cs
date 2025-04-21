@@ -13,7 +13,7 @@ public class MapZoomManager : MonoBehaviour
 
     [Header("Zoom Settings")]
     [SerializeField] private float zoomedOutSize = 5f; // Orthographic size when fully zoomed out (MATCH INITIAL CAMERA SIZE)
-    [SerializeField] private float zoomedInSize = 1.5f; // Orthographic size when zoomed into a quadrant
+    [SerializeField] private float zoomedInSize = 0.5f; // Orthographic size when zoomed into a quadrant
     [SerializeField] private float zoomDuration = 0.5f; // How long the zoom animation takes
 
     [SerializeField] private Vector3[] quadrantCenterPositions = new Vector3[4] {
@@ -89,6 +89,8 @@ public class MapZoomManager : MonoBehaviour
             // if (isZoomingIn) ShowQuadrantStagesView(); else ShowMapView();
             yield break; // Exit coroutine if no change needed
         }
+
+        Debug.Log("Current TimeScale: " + Time.timeScale);
 
         while (elapsedTime < zoomDuration)
         {
