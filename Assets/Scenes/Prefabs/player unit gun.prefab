@@ -99,10 +99,10 @@ PrefabInstance:
     - target: {fileID: 6525456693702148524, guid: 316a6803167db4ff99a676ec2b4e01e7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6822816955149909660, guid: 56a555efe467547b081b0e42cc50cf8c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6525456693702148524, guid: 316a6803167db4ff99a676ec2b4e01e7, type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397867559379457425, guid: 316a6803167db4ff99a676ec2b4e01e7, type: 3}
       propertyPath: m_SpriteTilingProperty.border.w

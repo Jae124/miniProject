@@ -179,7 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0d64454c79104af580ed23e0694f404, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  healthMultiplier: 0.2
+  baseMaxHealth: 100
   currHealth: 0
   damageSoundClips: []
   isPlayerBase: 0
@@ -209,6 +210,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 859dc804a464940a092e6f9371622199, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseAttackDamage: 10
+  damageMultiplier: 0.15
   attackDamage: 10
   attackRate: 1.5
   attackRange: 1.5
@@ -271,7 +274,7 @@ Animator:
   m_GameObject: {fileID: 3256910323006174674}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8565adabed408417eb90f02b442ffa3b, type: 2}
+  m_Controller: {fileID: 9100000, guid: e857ea7994eec4816ab7da81670ffc02, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -4,6 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(Health))] 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Animator))]
 public class UnitCombat : MonoBehaviour
 {
     [SerializeField] private int baseAttackDamage = 10;
@@ -20,6 +21,7 @@ public class UnitCombat : MonoBehaviour
     private Health targetHealth;
 
     private Health myHealth;
+    private Animator animator;
     private Rigidbody2D rb; // Or Rigidbody rb; for 3D
     private UnitMovement unitMovement; // Assuming you have a movement script
     private Coroutine attackCoroutine;
@@ -38,6 +40,8 @@ public class UnitCombat : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         unitMovement = GetComponent<UnitMovement>(); 
         attackDamage = baseAttackDamage;
+        animator = GetComponent<Animator>(); // Get the Animator
+        if (animator == null) Debug.LogError("Animator component missing!", this);
 
         if (unitMovement == null)
         {
@@ -236,11 +240,22 @@ public class UnitCombat : MonoBehaviour
             // Check target validity AGAIN AFTER waiting (and ensure still fighting state)
             if (isFighting && targetHealth != null && targetHealth.GetCurrentHealth() > 0)
             {
+                if (animator != null)
+                {
+                    animator.SetTrigger("Attack"); // Use the EXACT name of the trigger parameter
+                     Debug.Log($"{gameObject.name}: Set Attack Trigger");
+                }
+
+                yield return new WaitForSeconds(0.2f); // Example delay
+
+                // Deal Damage (check target again after potential delay)
+                 if (isFighting && targetHealth != null && targetHealth.GetCurrentHealth() > 0) {
+                      Debug.Log($"{gameObject.name} attacks {targetHealth.gameObject.name}...");
+                      targetHealth.TakeDamage(attackDamage);
+                 }
                 // Ensure we are still in attack range (Optional check for robustness)
                 // float distance = Vector2.Distance(transform.position, targetHealth.transform.position);
                 // if (distance <= attackRange) {
-                    Debug.Log($"{gameObject.name} attacks {targetHealth.gameObject.name} for {attackDamage} damage.");
-                    targetHealth.TakeDamage(attackDamage);
                 // } else {
                 //    Debug.Log($"{gameObject.name} target {targetHealth.gameObject.name} moved out of range during attack windup.");
                 //    // Don't break here, let Update handle StopFighting to resume movement

@@ -1,17 +1,21 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Animator))] 
 public class UnitMovement : MonoBehaviour
 {
     public float moveSpeed = 3f;
     public Transform targetTransform; // Set by UnitCombat script
 
     private Rigidbody2D rb;
+    private Animator animator; 
     private bool canMove = true;
 
     void Awake()
     {
+        animator = GetComponent<Animator>(); 
         rb = GetComponent<Rigidbody2D>();
+        if (animator == null) Debug.LogError("Animator component missing!", this);
     }
 
     void FixedUpdate()
@@ -24,8 +28,27 @@ public class UnitMovement : MonoBehaviour
             if(rb != null && rb.linearVelocity != Vector2.zero) {
                 rb.linearVelocity = Vector2.zero; // Stop completely
             }
+            if (!canMove && animator != null)
+            {
+                 animator.SetBool("isMoving", false);
+            }
             return; // Don't execute movement logic if stopped
         }
+
+        bool isCurrentlyMoving = false;
+        if (targetTransform != null) // Or however you decide to move
+        {
+             // Move towards target logic...
+             // rb.velocity = ...;
+
+             // Check if velocity magnitude is significant enough to count as moving
+             // Threshold helps ignore tiny drifts or physics jitter
+             if (rb.linearVelocity.sqrMagnitude > 0.01f) // Use squared magnitude for efficiency
+             {
+                 isCurrentlyMoving = true;
+             }
+        }
+
         if (targetTransform != null)
         {
             // Move towards the assigned target
@@ -46,16 +69,18 @@ public class UnitMovement : MonoBehaviour
                 rb.linearVelocity = Vector2.left * moveSpeed;
             }
         }
+        if (animator != null)
+        {
+            animator.SetBool("isMoving", isCurrentlyMoving);
+        }
     }
 
     public void StopMovement()
     {
         canMove = false;
         // Optionally force velocity to zero immediately
-        if (rb != null)
-        {
-            rb.linearVelocity = Vector2.zero; // Stops completely
-        }
+        if (animator != null) animator.SetBool("isMoving", false);
+        if (rb != null) rb.linearVelocity = Vector2.zero; // Stops completely
         //Debug.Log(gameObject.name + " movement stopped.");
     }
 
