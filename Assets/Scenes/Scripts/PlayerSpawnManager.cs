@@ -89,7 +89,7 @@ public class PlayerSpawnManager : MonoBehaviour
 
         if (unitPrefab != null && spawnPoint != null)
         {
-            Debug.Log("Spawning Player Unit!");
+            //Debug.Log("Spawning Player Unit!");
             GameObject unitInstance = Instantiate(unitPrefab, spawnPoint.position, spawnPoint.rotation); // Or Quaternion.identity
             Health unitHealth = unitInstance.GetComponent<Health>();
 
@@ -102,17 +102,17 @@ public class PlayerSpawnManager : MonoBehaviour
 
             if (healthBarPrefab == null)
             {
-            Debug.LogError("HealthBar Prefab not assigned in PlayerSpawnManager Inspector!", this);
-            return; // Cannot proceed without the prefab
+                Debug.LogError("HealthBar Prefab not assigned in PlayerSpawnManager Inspector!", this);
+                return; // Cannot proceed without the prefab
             }
 
             // 2. Spawn the Health Bar
             GameObject healthBarInstance = Instantiate(healthBarPrefab); // Spawn at world origin initially
-            Debug.Log($"Spawned Health Bar: {healthBarInstance.name}"); // Add log
+            //Debug.Log($"Spawned Health Bar: {healthBarInstance.name}"); // Add log
             // 3. Parent the Health Bar to the Unit
             //    Setting worldPositionStays = false makes its position relative to the parent's origin
             healthBarInstance.transform.SetParent(unitInstance.transform, false);
-            Debug.Log($"Set Parent of {healthBarInstance.name} to {unitInstance.name}. New Parent: {healthBarInstance.transform.parent?.name}"); // Add log
+            //Debug.Log($"Set Parent of {healthBarInstance.name} to {unitInstance.name}. New Parent: {healthBarInstance.transform.parent?.name}"); // Add log
 
 
             // 4. Reset Health Bar's Local Scale (optional, but good practice after parenting)
@@ -121,7 +121,7 @@ public class PlayerSpawnManager : MonoBehaviour
             WorldSpaceHealthBar healthBarScript = healthBarInstance.GetComponent<WorldSpaceHealthBar>();
             if (healthBarScript != null)
             {
-                Debug.Log($"Found HealthBar script on {healthBarInstance.name}. Initializing..."); // Add log
+                //Debug.Log($"Found HealthBar script on {healthBarInstance.name}. Initializing..."); // Add log
                 healthBarScript.Initialize(unitHealth); // Pass the unit's health component
             }
             else

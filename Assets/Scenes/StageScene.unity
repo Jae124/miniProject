@@ -1356,7 +1356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &691138279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,12 +1372,15 @@ MonoBehaviour:
   stage1Data:
     sceneName: SampleScene
     difficultyLevel: 1
+    stageButton: {fileID: 235638711}
   stage2Data:
     sceneName: SampleScene
     difficultyLevel: 2
+    stageButton: {fileID: 1889343045}
   stage3Data:
     sceneName: SampleScene
     difficultyLevel: 3
+    stageButton: {fileID: 1645338962}
 --- !u!4 &691138280
 Transform:
   m_ObjectHideFlags: 0

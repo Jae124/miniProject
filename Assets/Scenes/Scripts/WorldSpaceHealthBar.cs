@@ -68,9 +68,9 @@ public class WorldSpaceHealthBar : MonoBehaviour
              // Prevent division by zero if maxHealth is somehow 0
              if (maxHealth > 0)
              {
-                Debug.Log("Current Health: " + targetHealth.GetCurrentHealth() + ", Max Health: " + targetHealth.GetMaxHealth());
+                //Debug.Log("Current Health: " + targetHealth.GetCurrentHealth() + ", Max Health: " + targetHealth.GetMaxHealth());
                 healthSlider.value = (float)currentHealth / maxHealth; // Slider value is 0-1 range
-                Debug.Log("Health Slider Value: " + healthSlider.value); // Log the slider value
+                //Debug.Log("Health Slider Value: " + healthSlider.value); // Log the slider value
              }
              else
              {

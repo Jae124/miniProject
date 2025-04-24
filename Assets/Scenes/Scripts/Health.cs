@@ -72,7 +72,6 @@ public class Health : MonoBehaviour
     }
 
     void Die(){
-        Debug.Log("Unit destroyed");
         // Check if the GameObject has the tag "EnemyBase" or "PlayerBase"
         if (gameObject.CompareTag("EnemyBase"))
         {

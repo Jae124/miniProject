@@ -59,7 +59,7 @@ public class EnemyAISpawner : MonoBehaviour
     void SpawnEnemyWave() // Example wave logic
     {
         waveNumber++;
-        Debug.Log($"Starting Wave {waveNumber}");
+        //Debug.Log($"Starting Wave {waveNumber}");
 
         // --- EXAMPLE: Spawn different enemies based on wave ---
 
@@ -96,7 +96,7 @@ public class EnemyAISpawner : MonoBehaviour
         if (enemyCombat != null) enemyCombat.InitializeForStage(stageDifficulty);
 
         if (enemyHealth == null) { Debug.LogError("Spawned enemy missing Health script!", enemyInstance); return; }
-        Debug.Log($"Spawned '{enemyInstance.name}'");
+        //Debug.Log($"Spawned '{enemyInstance.name}'");
 
 
         // --- Health Bar Setup (Identical logic as before) ---

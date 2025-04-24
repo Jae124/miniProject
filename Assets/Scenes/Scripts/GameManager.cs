@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    private LevelManager lm;
+
     [Header("Game State")]
     [SerializeField] // Use SerializeField to see private fields in Inspector
     private bool isGameOver = false;
@@ -22,9 +24,35 @@ public class GameManager : MonoBehaviour
     [Tooltip("Assign the 'You Lose' UI Panel GameObject here.")]
     public GameObject youLosePanel;
 
-
     // --- Singleton Pattern (Recommended for easy access) ---
     public static GameManager Instance { get; private set; }
+
+    void Start()
+    {
+        lm = LevelManager.Instance;
+        // Accessing the LevelManager instance via the Singleton
+        if (lm != null)
+        {
+            // Call a public function on LevelManager
+            lm.NotifyStageStarted();
+
+            // Access a public variable or property (less ideal than using methods)
+            int difficulty = lm.GetCurrentDifficulty(); // Use a getter method preferably
+            // int difficulty = LevelManager.Instance.stageDifficultyLevel; // Direct access if public
+            Debug.Log("GameManager fetched difficulty from LevelManager: " + difficulty);
+            // Ensure Time Scale is normal at the start
+            Time.timeScale = 1f;
+            isGameOver = false; // Explicitly set game state
+
+            // Validate base references
+            if (playerBaseHealth == null) Debug.LogError("GameManager: Player Base Health not assigned!");
+            if (enemyBaseHealth == null) Debug.LogError("GameManager: Enemy Base Health not assigned!");
+        }
+        else
+        {
+            Debug.LogError("GameManager could not find the LevelManager Instance! Is LevelManager in the scene and active?");
+        }
+    }
 
     void Awake()
     {
@@ -45,17 +73,6 @@ public class GameManager : MonoBehaviour
         if (youLosePanel != null) youLosePanel.SetActive(false);
     }
     // --- End Singleton ---
-
-    void Start()
-    {
-        // Ensure Time Scale is normal at the start
-        Time.timeScale = 1f;
-        isGameOver = false; // Explicitly set game state
-
-        // Validate base references
-        if (playerBaseHealth == null) Debug.LogError("GameManager: Player Base Health not assigned!");
-        if (enemyBaseHealth == null) Debug.LogError("GameManager: Enemy Base Health not assigned!");
-    }
 
     void Update()
     {

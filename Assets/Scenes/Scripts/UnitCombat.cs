@@ -69,7 +69,7 @@ public class UnitCombat : MonoBehaviour
          if (currentTargetTransform != null && other.transform == currentTargetTransform) {
              // If the object leaving IS our current target, clear it
              // This doesn't stop combat immediately if already fighting, Update handles range check.
-             Debug.Log($"{gameObject.name} target {other.name} exited trigger range.");
+             //Debug.Log($"{gameObject.name} target {other.name} exited trigger range.");
              currentTargetTransform = null;
               // Optionally, if NOT fighting, tell movement script target is gone
               if (!isFighting && unitMovement != null) {
@@ -99,7 +99,7 @@ public class UnitCombat : MonoBehaviour
             {
                 // Found a potential target! Store its transform.
                 currentTargetTransform = detectedObject.transform;
-                 Debug.Log($"{gameObject.name} acquired potential target: {currentTargetTransform.name}");
+                 //Debug.Log($"{gameObject.name} acquired potential target: {currentTargetTransform.name}");
 
                 // Tell the movement script to move towards this target
                 if (unitMovement != null)
@@ -117,7 +117,7 @@ public class UnitCombat : MonoBehaviour
             // 1. Check if target died or was destroyed
             if (targetHealth == null || targetHealth.GetCurrentHealth() <= 0)
             {
-                Debug.Log($"{gameObject.name}: Target {currentTargetTransform?.name ?? "Unknown"} died or was destroyed. Stopping fight.");
+                //Debug.Log($"{gameObject.name}: Target {currentTargetTransform?.name ?? "Unknown"} died or was destroyed. Stopping fight.");
                 StopFighting();
                 return; // Exit update for this frame
             }
@@ -126,7 +126,7 @@ public class UnitCombat : MonoBehaviour
             float distanceToTarget = Vector2.Distance(transform.position, currentTargetTransform.position);
             if (distanceToTarget > attackRange)
             {
-                 Debug.Log($"{gameObject.name}: Target {currentTargetTransform.name} moved out of range ({distanceToTarget} > {attackRange}). Stopping fight.");
+                 //Debug.Log($"{gameObject.name}: Target {currentTargetTransform.name} moved out of range ({distanceToTarget} > {attackRange}). Stopping fight.");
                 StopFighting();
                 // Note: Movement will resume automatically because StopFighting calls StartMovement
             }
@@ -139,7 +139,7 @@ public class UnitCombat : MonoBehaviour
                 // Check if the potential target died before we engaged
                  Health potentialTargetHealth = currentTargetTransform.GetComponent<Health>(); // Get health again in case it changed
                  if(potentialTargetHealth == null || potentialTargetHealth.GetCurrentHealth() <= 0) {
-                      Debug.Log($"{gameObject.name}: Potential target {currentTargetTransform.name} died before engagement. Clearing target.");
+                      //Debug.Log($"{gameObject.name}: Potential target {currentTargetTransform.name} died before engagement. Clearing target.");
                       ClearCurrentTarget(); // Clear target if it's dead
                       return; // Exit update
                  }
@@ -167,7 +167,7 @@ public class UnitCombat : MonoBehaviour
         targetHealth = target; // Store the health component of the engaged target
         currentTargetTransform = target.transform; // Ensure currentTargetTransform is set
 
-        Debug.Log($"{gameObject.name} [Tag:{gameObject.tag}] ENGAGING {target.gameObject.name} [Tag:{target.gameObject.tag}] at range.");
+        //Debug.Log($"{gameObject.name} [Tag:{gameObject.tag}] ENGAGING {target.gameObject.name} [Tag:{target.gameObject.tag}] at range.");
 
         // Stop Movement
         if (unitMovement != null) unitMovement.StopMovement();
@@ -183,7 +183,7 @@ public class UnitCombat : MonoBehaviour
         if (!isFighting) return;
         isFighting = false;
         string previousTargetName = (currentTargetTransform != null) ? currentTargetTransform.name : ((targetHealth != null) ? targetHealth.gameObject.name : "Unknown");
-        Debug.Log($"{gameObject.name} stopped fighting {previousTargetName}");
+        //Debug.Log($"{gameObject.name} stopped fighting {previousTargetName}");
 
         if (attackCoroutine != null)
         {
@@ -216,11 +216,11 @@ public class UnitCombat : MonoBehaviour
 
         if (initialTarget == null || initialTarget.GetCurrentHealth() <= 0)
         {
-             Debug.Log($"{gameObject.name}: Target invalid at AttackRoutine start.");
+             //Debug.Log($"{gameObject.name}: Target invalid at AttackRoutine start.");
              // Update loop should handle calling StopFighting(), just exit coroutine
              yield break;
         }
-        Debug.Log($"{gameObject.name}: AttackRoutine started against {initialTarget.gameObject.name}");
+        //Debug.Log($"{gameObject.name}: AttackRoutine started against {initialTarget.gameObject.name}");
 
         while (isFighting) // Loop while the UNIT is in fighting state
         {
@@ -241,12 +241,12 @@ public class UnitCombat : MonoBehaviour
                 if (animator != null)
                 {
                     animator.SetTrigger("Attack"); // Use the EXACT name of the trigger parameter
-                     Debug.Log($"{gameObject.name}: Set Attack Trigger");
+                     //Debug.Log($"{gameObject.name}: Set Attack Trigger");
                 }
 
                 // Deal Damage (check target again after potential delay)
                  if (isFighting && targetHealth != null && targetHealth.GetCurrentHealth() > 0) {
-                      Debug.Log($"{gameObject.name} attacks {targetHealth.gameObject.name}...");
+                     // Debug.Log($"{gameObject.name} attacks {targetHealth.gameObject.name}...");
                       targetHealth.TakeDamage(attackDamage);
                  }
                 // Ensure we are still in attack range (Optional check for robustness)
@@ -263,14 +263,14 @@ public class UnitCombat : MonoBehaviour
             {
                  // Check if we stopped fighting during the yield
                  if (!isFighting) {
-                     Debug.Log($"{gameObject.name}: Stopped fighting during AttackRoutine yield.");
+                     //Debug.Log($"{gameObject.name}: Stopped fighting during AttackRoutine yield.");
                  } else {
-                     Debug.Log($"{gameObject.name}: Target {initialTarget.gameObject.name} became invalid during AttackRoutine loop (after wait).");
+                     //Debug.Log($"{gameObject.name}: Target {initialTarget.gameObject.name} became invalid during AttackRoutine loop (after wait).");
                  }
                  break; // Exit loop, Update will call StopFighting if needed
             }
         }
-        Debug.Log($"{gameObject.name}: AttackRoutine finished for target {initialTarget.gameObject.name}.");
+        //Debug.Log($"{gameObject.name}: AttackRoutine finished for target {initialTarget.gameObject.name}.");
         attackCoroutine = null;
     }
 
