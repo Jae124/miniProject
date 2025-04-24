@@ -45,16 +45,52 @@ public class LevelManager : MonoBehaviour
     }
 
     void Awake()
-{
-    if (Instance != null && Instance != this)
     {
-        Destroy(gameObject);
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this; // <<< IS THIS LINE DEFINITELY HERE AND REACHABLE?
+            // Optional: DontDestroyOnLoad(gameObject);
+        }
     }
-    else
+
+    public void StageWon()
     {
-        Instance = this; // <<< IS THIS LINE DEFINITELY HERE AND REACHABLE?
-        // Optional: DontDestroyOnLoad(gameObject);
+        Debug.Log($"Stage {stageDifficultyLevel} Won!");
+
+        // Get the current highest level completed
+        int highestCompleted = PlayerPrefs.GetInt(HighestLevelCompletedKey, 0);
+
+        // If this stage's level is higher than what's saved, update it
+        if (stageDifficultyLevel > highestCompleted)
+        {
+            PlayerPrefs.SetInt(HighestLevelCompletedKey, stageDifficultyLevel);
+            PlayerPrefs.Save(); // Save changes immediately
+            Debug.Log($"New Highest Level Completed Saved: {stageDifficultyLevel}");
+        }
+        else
+        {
+             Debug.Log($"Highest Level Completed ({highestCompleted}) remains unchanged.");
+        }
+
+        // --- Now decide what happens next ---
+        // Option 1: Go back to Stage Select
+         // FindObjectOfType<PauseManager>()?.ExitToStageSelect(); // Use existing function if applicable
+         // Or directly:
+         // Time.timeScale = 1f; // Ensure time is running
+         // SceneManager.LoadScene("StageSelectScene");
+
+        // Option 2: Load the next level automatically (if applicable)
+        // int nextLevel = stageDifficultyLevel + 1;
+        // string nextSceneName = "GameScene_Level" + nextLevel; // Assuming naming convention
+        // Check if next scene exists before loading? (More complex)
+        // Time.timeScale = 1f;
+        // SceneManager.LoadScene(nextSceneName);
+
+         // Option 3: Show a "
     }
-}
 }
 

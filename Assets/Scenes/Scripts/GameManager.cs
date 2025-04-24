@@ -130,6 +130,7 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log("Activating Win Panel");
                 youWinPanel.SetActive(true);
+                lm.StageWon();
             }
              else Debug.LogError("Win Panel not assigned to GameManager!");
         }
