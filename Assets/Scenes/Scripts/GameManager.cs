@@ -1,5 +1,7 @@
 using UnityEngine;
-// using UnityEngine.SceneManagement; // Optional: Add later for Restart functionality
+using UnityEngine.UI;
+using UnityEngine.SceneManagement; // Optional: Add later for Restart functionality
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -23,6 +25,17 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Assign the 'You Lose' UI Panel GameObject here.")]
     public GameObject youLosePanel;
+
+    [Header("Post-Stage UI")]
+    [SerializeField] private GameObject postStagePanel; // Assign the panel you just created
+    [SerializeField] private TMPro.TextMeshProUGUI outcomeText; // Assign the "Victory!"/"Defeat!" text element
+    [SerializeField] private Button nextStageButton; 
+
+    [Header("Scene Configuration")]
+    [Tooltip("Exact name of the Stage Select scene file")]
+    [SerializeField] private string stageSelectSceneName = "StageSelectScene";
+    [Tooltip("OPTIONAL: Manually define next stage scene name if not using naming convention")]
+    [SerializeField] private string nextStageSceneNameOverride = "";
 
     // --- Singleton Pattern (Recommended for easy access) ---
     public static GameManager Instance { get; private set; }
@@ -71,6 +84,7 @@ public class GameManager : MonoBehaviour
         // Ensure panels are initially off (safety check)
         if (youWinPanel != null) youWinPanel.SetActive(false);
         if (youLosePanel != null) youLosePanel.SetActive(false);
+        if(postStagePanel != null) postStagePanel.SetActive(false);
     }
     // --- End Singleton ---
 
@@ -118,8 +132,115 @@ public class GameManager : MonoBehaviour
         // For now, Time.timeScale = 0 is fine for the MVP.
 
         // --- Activate UI Panels (Moved from direct call here to Awake/Inspector link) ---
-         ActivateGameOverPanel(playerWon);
+        ActivateGameOverPanel(playerWon);
     }
+
+    private void ShowPostStageScreen(bool didWin)
+    {
+        if (postStagePanel == null) {
+             Debug.LogError("Post Stage Panel not assigned!");
+             return;
+        }
+
+        postStagePanel.SetActive(true); // Show the panel
+        Time.timeScale = 0f; // Pause the game
+
+        // Update outcome text
+        if (outcomeText != null)
+        {
+            outcomeText.text = didWin ? "Victory!" : "Defeat!";
+        }
+
+        // --- Configure Next Stage Button ---
+        if (nextStageButton != null)
+        {
+            // Check if the player won AND if there IS a next stage to go to
+            bool canProceed = didWin && CheckIfNextStageExists(); // Implement CheckIfNextStageExists
+
+            nextStageButton.interactable = canProceed;
+
+            // Optional: Change color if disabled
+            // Image nextButtonImage = nextStageButton.GetComponent<Image>();
+            // if(nextButtonImage != null) nextButtonImage.color = canProceed ? Color.white : Color.grey;
+        }
+    }
+
+    public void RetryCurrentStage()
+    {
+        Debug.Log("Retrying current stage...");
+        Time.timeScale = 1f; // IMPORTANT: Reset timescale
+        // Reload the currently active scene
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void LoadNextStage()
+    {
+        Time.timeScale = 1f; // IMPORTANT: Reset timescale
+
+        int nextLevelNumber = lm.stageDifficultyLevel + 1;
+        string nextSceneName = DetermineNextSceneName(nextLevelNumber);
+
+        if (!string.IsNullOrEmpty(nextSceneName))
+        {
+             // Optional: Update SelectedStageInfo if your loading depends on it
+             SelectedStageInfo.SelectedDifficulty = nextLevelNumber;
+             SelectedStageInfo.SceneToLoad = nextSceneName;
+
+             Debug.Log($"Loading Next Stage - Scene: {nextSceneName}, Difficulty: {nextLevelNumber}");
+             SceneManager.LoadScene(nextSceneName);
+        }
+        else
+        {
+             Debug.LogError("Could not determine or load next stage. Returning to Stage Select.");
+             ReturnToStageSelect(); // Fallback if next stage isn't found
+        }
+    }
+
+    public void ReturnToStageSelect()
+    {
+        Debug.Log($"Returning to scene: {stageSelectSceneName}");
+        Time.timeScale = 1f; // IMPORTANT: Reset timescale
+
+        if (string.IsNullOrEmpty(stageSelectSceneName)) {
+             Debug.LogError("Stage Select Scene Name not set!");
+             return;
+        }
+        SceneManager.LoadScene(stageSelectSceneName);
+    }
+
+    private bool CheckIfNextStageExists()
+    {
+        // Simple check: Assume there's a next stage for now
+        // More robust check needed for final level
+        string nextScene = DetermineNextSceneName(lm.stageDifficultyLevel + 1);
+
+        // Very basic check (better: use build settings or explicit list)
+        // This check only works if the scene name could be determined
+        return !string.IsNullOrEmpty(nextScene);
+
+        // TODO: Implement a proper check based on your total number of levels
+        // or checking if 'nextScene' exists in Build Settings.
+        // Example using total levels:
+        // int totalLevels = 5; // Define this somewhere
+        // return stageDifficultyLevel < totalLevels;
+    }
+
+    private string DetermineNextSceneName(int nextLevel) {
+         // Option 1: Use override field if set
+         if(!string.IsNullOrEmpty(nextStageSceneNameOverride)) {
+             return nextStageSceneNameOverride;
+         }
+
+         // Option 2: Use naming convention
+         return "GameScene_Level" + nextLevel; // Adjust if your naming is different
+
+         // Option 3: Look up in a data structure (if you have allStageData assigned)
+         // foreach (var stage in allStageData) {
+         //     if (stage.difficultyLevel == nextLevel) return stage.sceneName;
+         // }
+         // return ""; // Not found
+    }
+
 
     // Helper method to activate the correct panel
     private void ActivateGameOverPanel(bool playerWon)

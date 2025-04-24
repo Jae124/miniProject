@@ -338,7 +338,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 691138279}
+      - m_Target: {fileID: 5833472606532531694}
         m_TargetAssemblyTypeName: StageSelectManager, Assembly-CSharp
         m_MethodName: SelectStage1
         m_Mode: 1
@@ -1340,62 +1340,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572573797}
   m_CullTransparentMesh: 1
---- !u!1 &691138278
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 691138280}
-  - component: {fileID: 691138279}
-  m_Layer: 0
-  m_Name: StageSelectManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &691138279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691138278}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9228654e8c5124337b6a5e9c353d8ce2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stage1Data:
-    sceneName: SampleScene
-    difficultyLevel: 1
-    stageButton: {fileID: 235638711}
-  stage2Data:
-    sceneName: SampleScene
-    difficultyLevel: 2
-    stageButton: {fileID: 1889343045}
-  stage3Data:
-    sceneName: SampleScene
-    difficultyLevel: 3
-    stageButton: {fileID: 1645338962}
---- !u!4 &691138280
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691138278}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 313.75046, y: 138.33023, z: -2.219125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &713121883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,7 +1423,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 691138279}
+      - m_Target: {fileID: 5833472606532531694}
         m_TargetAssemblyTypeName: StageSelectManager, Assembly-CSharp
         m_MethodName: GoBack
         m_Mode: 5
@@ -2876,7 +2820,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 691138279}
+      - m_Target: {fileID: 5833472606532531694}
         m_TargetAssemblyTypeName: StageSelectManager, Assembly-CSharp
         m_MethodName: SelectStage3
         m_Mode: 1
@@ -3185,7 +3129,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 691138279}
+      - m_Target: {fileID: 5833472606532531694}
         m_TargetAssemblyTypeName: StageSelectManager, Assembly-CSharp
         m_MethodName: SelectStage2
         m_Mode: 1
@@ -3449,13 +3393,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985298015}
   m_CullTransparentMesh: 1
+--- !u!1 &1663199981853526168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6821154421629803286}
+  - component: {fileID: 5833472606532531694}
+  m_Layer: 0
+  m_Name: StageSelectManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &5833472606532531694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663199981853526168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9228654e8c5124337b6a5e9c353d8ce2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stage1Data:
+    sceneName: SampleScene
+    difficultyLevel: 1
+    stageButton: {fileID: 235638711}
+  stage2Data:
+    sceneName: SampleScene
+    difficultyLevel: 2
+    stageButton: {fileID: 1889343045}
+  stage3Data:
+    sceneName: SampleScene
+    difficultyLevel: 3
+    stageButton: {fileID: 1645338962}
+--- !u!4 &6821154421629803286
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663199981853526168}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 313.75046, y: 138.33023, z: -2.219125}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 394417838}
   - {fileID: 1141585786}
-  - {fileID: 691138280}
+  - {fileID: 6821154421629803286}
   - {fileID: 1689191673}
   - {fileID: 437976371}
   - {fileID: 303250186}
