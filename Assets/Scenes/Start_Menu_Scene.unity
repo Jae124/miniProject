@@ -838,6 +838,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 980436126}
   m_CullTransparentMesh: 1
+--- !u!1 &1304624336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1304624338}
+  - component: {fileID: 1304624337}
+  m_Layer: 0
+  m_Name: SaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1304624337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304624336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03fec087da7b74642a71dcbc51a35b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerProgress:
+    highestLevelCleared: 0
+    unlockedCharacterIDs:
+    - BasicSoldier
+    characterLevelIDs:
+    - BasicSoldier
+    characterLevels: 01000000
+    currentGold: 100
+--- !u!4 &1304624338
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304624336}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.4308887, y: 1.5224138, z: 2.566413}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1562997918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,3 +1249,4 @@ SceneRoots:
   - {fileID: 93852668}
   - {fileID: 2060268421}
   - {fileID: 221324985}
+  - {fileID: 1304624338}
