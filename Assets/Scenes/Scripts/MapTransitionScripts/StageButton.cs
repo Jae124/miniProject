@@ -57,7 +57,7 @@ public class StageButton : MonoBehaviour
         // Load the actual gameplay scene
         // You might need to pass mapID and stageIndex to the GameplayScene
         // For now, just load the scene:
-        SceneManager.LoadScene("GameplayScene"); // << USE YOUR GAMEPLAY SCENE NAME
+        SceneManager.LoadScene("SampleScene"); // << USE YOUR GAMEPLAY SCENE NAME
     }
 
      void OnDestroy() // Clean up listener
