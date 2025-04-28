@@ -463,7 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuPanel: {fileID: 155744887}
-  stageSceneName: StageScene
+  stageSceneName: StageSelectionScene
 --- !u!4 &125088392
 Transform:
   m_ObjectHideFlags: 0
@@ -724,6 +724,11 @@ MonoBehaviour:
   enemyBaseHealth: {fileID: 1725798604}
   youWinPanel: {fileID: 456010089}
   youLosePanel: {fileID: 1873074776}
+  postStagePanel: {fileID: 0}
+  outcomeText: {fileID: 0}
+  nextStageButton: {fileID: 0}
+  stageSelectSceneName: StageSelectionScene
+  nextStageSceneNameOverride: 
 --- !u!4 &146625521
 Transform:
   m_ObjectHideFlags: 0
@@ -775,7 +780,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 840, y: 451}
+  m_AnchoredPosition: {x: 840, y: 399}
   m_SizeDelta: {x: 95, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &151273271
@@ -1977,7 +1982,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 450}
+  m_AnchoredPosition: {x: 0, y: 395}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &440528082
