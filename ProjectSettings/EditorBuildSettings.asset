@@ -9,7 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Start_Menu_Scene.unity
     guid: 5ee910aab61794dc4822880527866a75
   - enabled: 1
-    path: Assets/Scenes/StageScene.unity
+    path: Assets/Scenes/MapSelectionScene.unity
+    guid: 89696a7e603c34f728b804cdfaa27248
+  - enabled: 1
+    path: Assets/Scenes/StageSelectionScene.unity
     guid: 511136ae7b48348c786bc2af8d45f1c2
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity

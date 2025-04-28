@@ -10,6 +10,8 @@ public class SaveManager : MonoBehaviour
     public PlayerProgress playerProgress; // Holds the loaded or new progress data
     private string saveFilePath;
 
+    public string CurrentSelectedMapID { get; set; } // Stores the ID of the map the player just chose
+
     void Awake()
     {
         if (Instance != null && Instance != this) { Destroy(this.gameObject); return; }
@@ -60,13 +62,20 @@ public class SaveManager : MonoBehaviour
         // SaveGame();
     }
 
+    // --- Update Progress Method ---
+    public void UpdateStageProgress(string mapID, int stageJustClearedIndex)
+    {
+        playerProgress.SetHighestStageForMap(mapID, stageJustClearedIndex);
+        SaveGame(); // Save after updating progress
+    }
+
     // --- Application Pause/Quit Saving ---
     void OnApplicationPause(bool pauseStatus) { if (pauseStatus) { SaveGame(); } }
     void OnApplicationQuit() { SaveGame(); }
 
     // --- Convenience Accessors (optional but clean) ---
     public int GetCurrentGold() => playerProgress.currentGold;
-    public int GetHighestLevelCleared() => playerProgress.highestLevelCleared;
+    // public int GetHighestLevelCleared() => playerProgress.highestLevelCleared;
     public List<string> GetUnlockedCharacterIDs() => playerProgress.unlockedCharacterIDs;
     public int GetCharacterLevel(string charID) => playerProgress.GetLevelForCharacter(charID);
 
@@ -90,14 +99,14 @@ public class SaveManager : MonoBehaviour
         return false; // Not enough gold
     }
 
-    public void UpdateHighestLevel(int levelJustCleared)
-    {
-        if (levelJustCleared > playerProgress.highestLevelCleared)
-        {
-            playerProgress.highestLevelCleared = levelJustCleared;
-            SaveGame(); // Save immediately after beating a new highest level
-        }
-    }
+    // public void UpdateHighestLevel(int levelJustCleared)
+    // {
+    //     if (levelJustCleared > playerProgress.highestLevelCleared)
+    //     {
+    //         playerProgress.highestLevelCleared = levelJustCleared;
+    //         SaveGame(); // Save immediately after beating a new highest level
+    //     }
+    // }
 
      public void UnlockCharacter(string characterID)
     {
