@@ -75,6 +75,7 @@ public class LevelManager : MonoBehaviour
         {
              Debug.Log($"Highest Level Completed ({highestCompleted}) remains unchanged.");
         }
+        
 
         // --- Now decide what happens next ---
         // Option 1: Go back to Stage Select
