@@ -13,6 +13,8 @@ public class StageButton : MonoBehaviour
     private string mapID;
     private int stageIndex; // The index within this map (0-9)
 
+    public int energyCost = 1; // Default cost, can vary per stage if needed
+
     void Awake()
     {
         button = GetComponent<Button>();
@@ -42,22 +44,50 @@ public class StageButton : MonoBehaviour
         // ShowStars(starsEarned);
     }
 
+    // void OnStageSelected()
+    // {
+    //     Debug.Log($"Stage Selected: Map '{mapID}', Stage Index {stageIndex} (Level {(stageIndex + 1)})");
+
+    //     // Store selected stage info (optional, could also pass via SceneManager if needed)
+    //     // If your GameplayScene needs this info, store it in SaveManager or another persistent manager
+    //     if (SaveManager.Instance != null) {
+    //         // Optionally store stageIndex if GameplayScene needs it directly
+    //         // SaveManager.Instance.CurrentSelectedStageIndex = stageIndex;
+    //     }
+
+
+    //     // Load the actual gameplay scene
+    //     // You might need to pass mapID and stageIndex to the GameplayScene
+    //     // For now, just load the scene:
+    //     SceneManager.LoadScene("SampleScene"); // << USE YOUR GAMEPLAY SCENE NAME
+    // }
     void OnStageSelected()
     {
-        Debug.Log($"Stage Selected: Map '{mapID}', Stage Index {stageIndex} (Level {(stageIndex + 1)})");
+        // --- Check Energy BEFORE Proceeding ---
+        if (SaveManager.Instance != null)
+        {
+            if (SaveManager.Instance.ConsumeEnergy(energyCost))
+            {
+                // --- SUCCESS: Energy consumed ---
+                Debug.Log($"Starting Stage: Map '{mapID}', Stage Index {stageIndex} (Cost: {energyCost})");
 
-        // Store selected stage info (optional, could also pass via SceneManager if needed)
-        // If your GameplayScene needs this info, store it in SaveManager or another persistent manager
-        if (SaveManager.Instance != null) {
-            // Optionally store stageIndex if GameplayScene needs it directly
-            // SaveManager.Instance.CurrentSelectedStageIndex = stageIndex;
+                // Store info or load GameplayScene (as before)
+                // SaveManager.Instance.CurrentSelectedStageIndex = stageIndex; // Optional
+                SceneManager.LoadScene("SampleScene");
+            }
+            else
+            {
+                // --- FAILURE: Not enough energy ---
+                Debug.Log($"Not enough energy to start stage {stageIndex + 1}. Cost: {energyCost}");
+                // TODO: Show a message to the player (e.g., pop-up, text notification)
+                // Example: 
+                //UIManager.Instance.ShowNotification("Not enough energy!");
+            }
         }
-
-
-        // Load the actual gameplay scene
-        // You might need to pass mapID and stageIndex to the GameplayScene
-        // For now, just load the scene:
-        SceneManager.LoadScene("SampleScene"); // << USE YOUR GAMEPLAY SCENE NAME
+        else
+        {
+            Debug.LogError("SaveManager instance not found! Cannot start stage.");
+        }
     }
 
      void OnDestroy() // Clean up listener

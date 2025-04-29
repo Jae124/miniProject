@@ -1,5 +1,6 @@
 using System.Collections.Generic; // Needed for Lists
 using UnityEngine; // Needed for Debug.Log if you add methods here
+using System; // Needed for DateTime
 
 [System.Serializable] // Make it saveable by JsonUtility
 public class PlayerProgress
@@ -10,6 +11,11 @@ public class PlayerProgress
     public List<string> characterLevelIDs;     // Parallel list: IDs of characters whose levels are stored
     public List<int> characterLevels;         // Parallel list: The level corresponding to the ID at the same index
     public int currentGold;
+
+    // --- NEW Energy Fields ---
+    public int currentEnergy;
+    public int maxEnergy;
+    public string lastEnergyUpdateTimeString; // Store DateTime as ISO 8601 string
 
     // --- New Fields for Per-Map Progress ---
     // Key: Map ID (e.g., "ForestMap", "DesertMap", "IceMap", "VolcanoMap")
@@ -31,6 +37,12 @@ public class PlayerProgress
         // Initialize map progress (assuming 4 maps with IDs below)
         mapIDs = new List<string>() { "ForestMap", "DesertMap", "IceMap", "VolcanoMap" }; // << CHANGE THESE IDs AS NEEDED
         highestStageClearedPerMap = new List<int>() { 0, 0, 0, 0 }; // Start all maps at 0 cleared
+
+        // --- NEW Energy Defaults ---
+        maxEnergy = 20; // << SET YOUR DESIRED MAX ENERGY CAPACITY
+        currentEnergy = maxEnergy; // Start with full energy
+        // Store the time the game was created as the last update time
+        lastEnergyUpdateTimeString = DateTime.UtcNow.ToString("o"); // "o" = ISO 8601 format        
     }
 
     // --- Helper to Get Highest Stage for a Specific Map ---
