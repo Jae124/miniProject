@@ -1,0 +1,505 @@
+fileFormatVersion: 2
+guid: 862912f2e1a384490a9e6a15ca1d12f0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5549130828909794290
+    second: fb_attack_spritesheet_transparent_0
+  - first:
+      213: 2291600397771950885
+    second: fb_attack_spritesheet_transparent_1
+  - first:
+      213: -2249154599870159083
+    second: fb_attack_spritesheet_transparent_2
+  - first:
+      213: 6421098365598274124
+    second: fb_attack_spritesheet_transparent_3
+  - first:
+      213: -2850675020804659231
+    second: fb_attack_spritesheet_transparent_4
+  - first:
+      213: -7295378768771217015
+    second: fb_attack_spritesheet_transparent_5
+  - first:
+      213: 971197607287987653
+    second: fb_attack_spritesheet_transparent_6
+  - first:
+      213: -2868207149366636278
+    second: fb_attack_spritesheet_transparent_7
+  - first:
+      213: 8957614555428709397
+    second: fb_attack_spritesheet_transparent_8
+  - first:
+      213: 2967666024665215792
+    second: fb_attack_spritesheet_transparent_9
+  - first:
+      213: 4673046432170313827
+    second: fb_attack_spritesheet_transparent_10
+  - first:
+      213: -6263519495381528005
+    second: fb_attack_spritesheet_transparent_11
+  - first:
+      213: -2982937267742498617
+    second: fb_attack_spritesheet_transparent_12
+  - first:
+      213: -1885773674412571112
+    second: fb_attack_spritesheet_transparent_13
+  - first:
+      213: -3165318050743432556
+    second: fb_attack_spritesheet_transparent_14
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_0
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1030
+        width: 241
+        height: 338
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0ca9a269e68df2b0800000000000000
+      internalID: -5549130828909794290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_1
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 1030
+        width: 234
+        height: 337
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52b475c9b666dcf10800000000000000
+      internalID: 2291600397771950885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_2
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1225
+        width: 11
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 517adc5dec569c0e0800000000000000
+      internalID: -2249154599870159083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_3
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 1031
+        width: 239
+        height: 334
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c42935d61f25c1950800000000000000
+      internalID: 6421098365598274124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_4
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 1032
+        width: 238
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e7ebde0c2e5078d0800000000000000
+      internalID: -2850675020804659231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_5
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 690
+        width: 235
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 989077199ab91ca90800000000000000
+      internalID: -7295378768771217015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_6
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 692
+        width: 229
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cd1c1504136a7d00800000000000000
+      internalID: 971197607287987653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_7
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 692
+        width: 245
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0114c74bc41238d0800000000000000
+      internalID: -2868207149366636278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_8
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 692
+        width: 245
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514623b8af6df4c70800000000000000
+      internalID: 8957614555428709397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_9
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 356
+        width: 246
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0337a2ca6844f2920800000000000000
+      internalID: 2967666024665215792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_10
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 356
+        width: 247
+        height: 329
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3680b60a8fef9d040800000000000000
+      internalID: 4673046432170313827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_11
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 356
+        width: 246
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b32dc0a54328319a0800000000000000
+      internalID: -6263519495381528005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_12
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 356
+        width: 246
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c02fe8fb5a7a96d0800000000000000
+      internalID: -2982937267742498617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_13
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 14
+        width: 248
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8160bd995d264d5e0800000000000000
+      internalID: -1885773674412571112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fb_attack_spritesheet_transparent_14
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 14
+        width: 255
+        height: 332
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49a4e40e0088214d0800000000000000
+      internalID: -3165318050743432556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

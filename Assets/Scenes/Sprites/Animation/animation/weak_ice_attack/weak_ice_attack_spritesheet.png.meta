@@ -1,0 +1,655 @@
+fileFormatVersion: 2
+guid: 3e413654af92143e6a28b8354f195db4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4840910846695250836
+    second: weak_ice_attack_spritesheet_0
+  - first:
+      213: 3496683939453334918
+    second: weak_ice_attack_spritesheet_1
+  - first:
+      213: -3605819326338218658
+    second: weak_ice_attack_spritesheet_2
+  - first:
+      213: 3591512508592610467
+    second: weak_ice_attack_spritesheet_3
+  - first:
+      213: 2836224067282748514
+    second: weak_ice_attack_spritesheet_4
+  - first:
+      213: 6383780325473014838
+    second: weak_ice_attack_spritesheet_5
+  - first:
+      213: -296905911593742196
+    second: weak_ice_attack_spritesheet_6
+  - first:
+      213: 4783424189330391732
+    second: weak_ice_attack_spritesheet_7
+  - first:
+      213: -4319412973596020504
+    second: weak_ice_attack_spritesheet_8
+  - first:
+      213: 8882713869955716581
+    second: weak_ice_attack_spritesheet_9
+  - first:
+      213: -3520580359543625880
+    second: weak_ice_attack_spritesheet_10
+  - first:
+      213: -1489497401979861379
+    second: weak_ice_attack_spritesheet_11
+  - first:
+      213: -2950349846394833195
+    second: weak_ice_attack_spritesheet_12
+  - first:
+      213: 1438840510038578164
+    second: weak_ice_attack_spritesheet_13
+  - first:
+      213: 2483187657419746197
+    second: weak_ice_attack_spritesheet_14
+  - first:
+      213: -1637910812275333162
+    second: weak_ice_attack_spritesheet_15
+  - first:
+      213: 3889943709581906787
+    second: weak_ice_attack_spritesheet_16
+  - first:
+      213: -2573947212678081568
+    second: weak_ice_attack_spritesheet_17
+  - first:
+      213: 4455380698254594255
+    second: weak_ice_attack_spritesheet_18
+  - first:
+      213: 2601914926878920935
+    second: weak_ice_attack_spritesheet_19
+  - first:
+      213: -6540761740561501288
+    second: weak_ice_attack_spritesheet_20
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 545
+        width: 308
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b1b9e44ce5e2340800000000000000
+      internalID: 4840910846695250836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 819
+        width: 292
+        height: 268
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 685fde64487b68030800000000000000
+      internalID: 3496683939453334918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 815
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e554f595d6e85fdc0800000000000000
+      internalID: -3605819326338218658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 794
+        width: 230
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3acd801199d97d130800000000000000
+      internalID: 3591512508592610467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 523
+        width: 68
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2644dc123ca4c5720800000000000000
+      internalID: 2836224067282748514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 537
+        width: 41
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63452ff126eb79850800000000000000
+      internalID: 6383780325473014838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 541
+        width: 228
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c80ddbf75ad21ebf0800000000000000
+      internalID: -296905911593742196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 527
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b28c0fd4f2226240800000000000000
+      internalID: 4783424189330391732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 537
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e0789629cc5e04c0800000000000000
+      internalID: -4319412973596020504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 452
+        y: 540
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e5552cb33db54b70800000000000000
+      internalID: 8882713869955716581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 545
+        width: 229
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8676f2ad0d2642fc0800000000000000
+      internalID: -3520580359543625880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 524
+        width: 72
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d768f1d210e345be0800000000000000
+      internalID: -1489497401979861379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 272
+        width: 236
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6f18242704e07d0800000000000000
+      internalID: -2950349846394833195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 516
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f39a4112d9c7f310800000000000000
+      internalID: 1438840510038578164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 507
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59b6327940e067220800000000000000
+      internalID: 2483187657419746197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 526
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d7ae845bc8f449e0800000000000000
+      internalID: -1637910812275333162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 253
+        width: 68
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36315eda13bdbf530800000000000000
+      internalID: 3889943709581906787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 272
+        width: 235
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e357bdb5a0874cd0800000000000000
+      internalID: -2573947212678081568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 262
+        width: 27
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc0d892b321b4dd30800000000000000
+      internalID: 4455380698254594255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 272
+        width: 220
+        height: 251
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0976827dbdb1420800000000000000
+      internalID: 2601914926878920935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: weak_ice_attack_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 220
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 893bd55f9db8a35a0800000000000000
+      internalID: -6540761740561501288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
