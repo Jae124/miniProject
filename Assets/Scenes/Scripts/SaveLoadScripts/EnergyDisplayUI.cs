@@ -3,12 +3,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using System; // Needed for TimeSpan formatting
 using System.Collections; // Required for Coroutines
+using TMPro;
 
 
 public class EnergyDisplayUI : MonoBehaviour
 {
-    public Text energyAmountText; // Assign the "X / Y" text element
-    public Text nextEnergyTimerText; // Assign the "Next in..." text element (optional)
+    public TextMeshProUGUI energyAmountText; // Assign the "X / Y" text element
+    public TextMeshProUGUI nextEnergyTimerText; // Assign the "Next in..." text element (optional)
     public Slider energySlider; // Assign a Slider (optional)
     public Image energyFillImage; // Assign an Image with Fill method (optional)
 
