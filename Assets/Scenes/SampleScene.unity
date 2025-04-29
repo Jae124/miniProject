@@ -5860,8 +5860,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45cc352474e5343c1b2e73e21cfea40e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thisLevelNumber: 1
-  stageDifficultyLevel: 1
+  thisLevelNumber: 0
+  stageDifficultyLevel: 0
 --- !u!4 &1620578645
 Transform:
   m_ObjectHideFlags: 0
@@ -6401,7 +6401,7 @@ MonoBehaviour:
   - {fileID: 2642610727653086783, guid: df6f499b1ebe843d28fe042d5f57d6fa, type: 3}
   - {fileID: 4387731131569846408, guid: 5dda195bbec89417b927bf1c893e0de4, type: 3}
   spawnPoint: {fileID: 491623885}
-  spawnInterval: 10
+  spawnInterval: 8
 --- !u!61 &1725798602
 BoxCollider2D:
   m_ObjectHideFlags: 0

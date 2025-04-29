@@ -24,6 +24,7 @@ public class EnemyAISpawner : MonoBehaviour
     {
         stageDifficulty = SelectedStageInfo.SelectedDifficulty;
         gameManager = GameManager.Instance;
+        Debug.Log($"EnemySpawner starting for Difficulty read from SelectedStageInfo: {stageDifficulty}");
 
         // Error checking
         if (spawnPoint == null)

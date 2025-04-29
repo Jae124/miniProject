@@ -5,7 +5,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance { get; private set; }
 
     public int thisLevelNumber = 1; // Assign this in the Inspector for each game scene
-    public int stageDifficultyLevel = 1;
+    public int stageDifficultyLevel = 0;
 
     // Key to store the highest level completed in PlayerPrefs
     private const string HighestLevelCompletedKey = "HighestStageCompleted";
@@ -25,7 +25,6 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.Save(); // Good practice to save immediately
             Debug.Log($"New Highest Level Completed Saved: {thisLevelNumber}");
         }
-
     }
 
     public void OnEnemyBaseDestroyed() // Called by the base's Health script perhaps
@@ -53,6 +52,7 @@ public class LevelManager : MonoBehaviour
         else
         {
             Instance = this; // <<< IS THIS LINE DEFINITELY HERE AND REACHABLE?
+            stageDifficultyLevel = PlayerPrefs.GetInt(HighestLevelCompletedKey, 0) + 1;
             // Optional: DontDestroyOnLoad(gameObject);
         }
     }
