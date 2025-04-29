@@ -5,7 +5,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance { get; private set; }
 
     public int thisLevelNumber = 1; // Assign this in the Inspector for each game scene
-    public int stageDifficultyLevel = 0;
+    public int stageDifficultyLevel = 1;
 
     // Key to store the highest level completed in PlayerPrefs
     private const string HighestLevelCompletedKey = "HighestStageCompleted";
@@ -52,7 +52,7 @@ public class LevelManager : MonoBehaviour
         else
         {
             Instance = this; // <<< IS THIS LINE DEFINITELY HERE AND REACHABLE?
-            stageDifficultyLevel = PlayerPrefs.GetInt(HighestLevelCompletedKey, 0) + 1;
+            stageDifficultyLevel = SelectedStageInfo.SelectedDifficulty;
             // Optional: DontDestroyOnLoad(gameObject);
         }
     }

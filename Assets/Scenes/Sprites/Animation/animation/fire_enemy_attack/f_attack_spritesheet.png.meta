@@ -1122,7 +1122,47 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      f_attack_spritesheet_0: 2038196640139034735
+      f_attack_spritesheet_1: -6009524655413232352
+      f_attack_spritesheet_10: -7607720241439483591
+      f_attack_spritesheet_11: 8735719144711384338
+      f_attack_spritesheet_12: -397604790809886462
+      f_attack_spritesheet_13: -7257089273469525530
+      f_attack_spritesheet_14: 3554238264574721595
+      f_attack_spritesheet_15: -2154413548843554001
+      f_attack_spritesheet_16: 2205663685348365935
+      f_attack_spritesheet_17: -1479998390119816937
+      f_attack_spritesheet_18: 5625129365535078010
+      f_attack_spritesheet_19: 6766534414031425249
+      f_attack_spritesheet_2: 176948339408877428
+      f_attack_spritesheet_20: -64205944916174878
+      f_attack_spritesheet_21: -978685032765681092
+      f_attack_spritesheet_22: 3032728919218930348
+      f_attack_spritesheet_23: -1991288843685416552
+      f_attack_spritesheet_24: 905396720841894696
+      f_attack_spritesheet_25: 4154529562172447131
+      f_attack_spritesheet_26: 8211503081227041163
+      f_attack_spritesheet_27: 1004514317664319031
+      f_attack_spritesheet_28: -3848102087867042654
+      f_attack_spritesheet_29: -8622031244383187800
+      f_attack_spritesheet_3: 5740111824271269397
+      f_attack_spritesheet_30: 7577748619577911677
+      f_attack_spritesheet_31: -8169564517010100307
+      f_attack_spritesheet_32: 1910281424945189624
+      f_attack_spritesheet_33: 1988091829435298984
+      f_attack_spritesheet_34: 767374623410261977
+      f_attack_spritesheet_35: 2715726029836443642
+      f_attack_spritesheet_36: -3212776948957105805
+      f_attack_spritesheet_37: 2736494003931577135
+      f_attack_spritesheet_38: 6939012664613640236
+      f_attack_spritesheet_39: -3924559273727705261
+      f_attack_spritesheet_4: -9132341233794907547
+      f_attack_spritesheet_5: -4996978405607331441
+      f_attack_spritesheet_6: -1708887726734641323
+      f_attack_spritesheet_7: 7476727365751846021
+      f_attack_spritesheet_8: 1022411519746674984
+      f_attack_spritesheet_9: -7324430893754401570
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

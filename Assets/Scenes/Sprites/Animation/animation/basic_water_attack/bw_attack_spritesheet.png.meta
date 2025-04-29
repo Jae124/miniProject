@@ -1072,7 +1072,45 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bw_attack_spritesheet_0: 9150080404945799105
+      bw_attack_spritesheet_1: 4178741062258694452
+      bw_attack_spritesheet_10: 1521218278228267353
+      bw_attack_spritesheet_11: -1657229473155219172
+      bw_attack_spritesheet_12: -8262809178933070509
+      bw_attack_spritesheet_13: 7862240429393314532
+      bw_attack_spritesheet_14: -285911195233078919
+      bw_attack_spritesheet_15: -2812425040310613644
+      bw_attack_spritesheet_16: 6844661674420941130
+      bw_attack_spritesheet_17: 7522871235503294735
+      bw_attack_spritesheet_18: -5293230133639666681
+      bw_attack_spritesheet_19: -1530881012296258505
+      bw_attack_spritesheet_2: -3090313518164859384
+      bw_attack_spritesheet_20: -4616024900555125565
+      bw_attack_spritesheet_21: -415618604662683112
+      bw_attack_spritesheet_22: 774993671730641468
+      bw_attack_spritesheet_23: -6034478455308029677
+      bw_attack_spritesheet_24: 5261866491548505681
+      bw_attack_spritesheet_25: 2332467210466606226
+      bw_attack_spritesheet_26: 7791719861166171051
+      bw_attack_spritesheet_27: 8048598888340328975
+      bw_attack_spritesheet_28: 892311627439009343
+      bw_attack_spritesheet_29: 6156593169254550288
+      bw_attack_spritesheet_3: -536184586281250273
+      bw_attack_spritesheet_30: -8673314201039045665
+      bw_attack_spritesheet_31: 4040542389717147731
+      bw_attack_spritesheet_32: -8557406209085050789
+      bw_attack_spritesheet_33: -6351625557054177229
+      bw_attack_spritesheet_34: 2402955757799954531
+      bw_attack_spritesheet_35: -1334615989921113774
+      bw_attack_spritesheet_36: -260569181585209588
+      bw_attack_spritesheet_37: 9002185162987837762
+      bw_attack_spritesheet_4: -5186406896307959436
+      bw_attack_spritesheet_5: 6611260330288202818
+      bw_attack_spritesheet_6: 4440486764692771484
+      bw_attack_spritesheet_7: 2884628736320470857
+      bw_attack_spritesheet_8: 384183236437556659
+      bw_attack_spritesheet_9: -241967373607824315
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

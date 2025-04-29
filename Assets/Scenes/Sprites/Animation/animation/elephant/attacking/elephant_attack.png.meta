@@ -747,7 +747,32 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      elephant_attack_0: -8448088579403017905
+      elephant_attack_1: -6720181049836228547
+      elephant_attack_10: 4515632274715082934
+      elephant_attack_11: -2891221806768874194
+      elephant_attack_12: 7886968817960657140
+      elephant_attack_13: 122812669123702340
+      elephant_attack_14: -731893303034122757
+      elephant_attack_15: -4686020870205449653
+      elephant_attack_16: 5682853273359610520
+      elephant_attack_17: -3634210710737487654
+      elephant_attack_18: -8699450496127524948
+      elephant_attack_19: -3165971904851214156
+      elephant_attack_2: 2433494912525316299
+      elephant_attack_20: 6027943181747729668
+      elephant_attack_21: -6139810695687078581
+      elephant_attack_22: 3891409291432029886
+      elephant_attack_23: -7372180991088320662
+      elephant_attack_24: 6450409849762422978
+      elephant_attack_3: -5579600581425078904
+      elephant_attack_4: 5736229285724229119
+      elephant_attack_5: 7329858115729340172
+      elephant_attack_6: -7420345361083754725
+      elephant_attack_7: 6989466749108461609
+      elephant_attack_8: -5637056497336127251
+      elephant_attack_9: -3436501176096318463
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

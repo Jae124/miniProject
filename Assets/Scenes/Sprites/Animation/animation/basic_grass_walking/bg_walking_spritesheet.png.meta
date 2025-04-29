@@ -222,7 +222,11 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bg_walking_spritesheet_0: -1196505825283514305
+      bg_walking_spritesheet_1: -7855547216610841857
+      bg_walking_spritesheet_2: 185575577573852748
+      bg_walking_spritesheet_3: -4490102652449973657
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

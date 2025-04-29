@@ -647,7 +647,28 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      weak_ice_attack_spritesheet_0: 4840910846695250836
+      weak_ice_attack_spritesheet_1: 3496683939453334918
+      weak_ice_attack_spritesheet_10: -3520580359543625880
+      weak_ice_attack_spritesheet_11: -1489497401979861379
+      weak_ice_attack_spritesheet_12: -2950349846394833195
+      weak_ice_attack_spritesheet_13: 1438840510038578164
+      weak_ice_attack_spritesheet_14: 2483187657419746197
+      weak_ice_attack_spritesheet_15: -1637910812275333162
+      weak_ice_attack_spritesheet_16: 3889943709581906787
+      weak_ice_attack_spritesheet_17: -2573947212678081568
+      weak_ice_attack_spritesheet_18: 4455380698254594255
+      weak_ice_attack_spritesheet_19: 2601914926878920935
+      weak_ice_attack_spritesheet_2: -3605819326338218658
+      weak_ice_attack_spritesheet_20: -6540761740561501288
+      weak_ice_attack_spritesheet_3: 3591512508592610467
+      weak_ice_attack_spritesheet_4: 2836224067282748514
+      weak_ice_attack_spritesheet_5: 6383780325473014838
+      weak_ice_attack_spritesheet_6: -296905911593742196
+      weak_ice_attack_spritesheet_7: 4783424189330391732
+      weak_ice_attack_spritesheet_8: -4319412973596020504
+      weak_ice_attack_spritesheet_9: 8882713869955716581
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

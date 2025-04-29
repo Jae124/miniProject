@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      d_walking_spritesheet_0: -8073114562990758087
+      d_walking_spritesheet_1: -3152761608828933607
+      d_walking_spritesheet_2: -3564366656331100681
+      d_walking_spritesheet_3: 4017430380449033015
+      d_walking_spritesheet_4: 6900123273021004363
+      d_walking_spritesheet_5: 5639941434843696364
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

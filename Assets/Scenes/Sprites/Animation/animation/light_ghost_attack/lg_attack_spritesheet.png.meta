@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lg_attack_spritesheet_0: -3546142098869101487
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

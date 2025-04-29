@@ -472,7 +472,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      elephant_walking_0: -1806978834250559882
+      elephant_walking_1: -2487791686322274185
+      elephant_walking_10: -8642770316976190202
+      elephant_walking_11: 3772423871656479932
+      elephant_walking_12: 3908688544541820286
+      elephant_walking_13: 8735110221958306389
+      elephant_walking_2: 4573758898893231068
+      elephant_walking_3: 7457572856316184574
+      elephant_walking_4: 1580267341300082551
+      elephant_walking_5: -4821074200683618754
+      elephant_walking_6: 7615787700358768604
+      elephant_walking_7: -1332565088103694966
+      elephant_walking_8: -4242758987024605723
+      elephant_walking_9: 7367426954017981061
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

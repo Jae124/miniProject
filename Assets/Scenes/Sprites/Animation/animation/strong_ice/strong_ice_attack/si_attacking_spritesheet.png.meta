@@ -772,7 +772,33 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      si_attacking_spritesheet_0: -5104018116827842585
+      si_attacking_spritesheet_1: -8437852754639298154
+      si_attacking_spritesheet_10: 4203824208455801816
+      si_attacking_spritesheet_11: -2788427498457373195
+      si_attacking_spritesheet_12: -3497716461947618045
+      si_attacking_spritesheet_13: -3840074929310287612
+      si_attacking_spritesheet_14: 2572849948966134544
+      si_attacking_spritesheet_15: -5709296082702352740
+      si_attacking_spritesheet_16: 2900557837895161489
+      si_attacking_spritesheet_17: 5952298195505840939
+      si_attacking_spritesheet_18: -8281647282917334710
+      si_attacking_spritesheet_19: -7707852838388410719
+      si_attacking_spritesheet_2: -6026435849342730263
+      si_attacking_spritesheet_20: 488907215174235258
+      si_attacking_spritesheet_21: 8992226976641523634
+      si_attacking_spritesheet_22: 4735179545132167500
+      si_attacking_spritesheet_23: -5104623912710133758
+      si_attacking_spritesheet_24: -8340962700140809896
+      si_attacking_spritesheet_25: 2551400343821249886
+      si_attacking_spritesheet_3: 4917284374835688664
+      si_attacking_spritesheet_4: 2477557015551071930
+      si_attacking_spritesheet_5: 8315848491067453785
+      si_attacking_spritesheet_6: -5916749893215097471
+      si_attacking_spritesheet_7: -1040113029767200811
+      si_attacking_spritesheet_8: -8118661818760474176
+      si_attacking_spritesheet_9: 7521212985375572524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

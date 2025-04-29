@@ -497,7 +497,22 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fb_attack_spritesheet_transparent_0: -5549130828909794290
+      fb_attack_spritesheet_transparent_1: 2291600397771950885
+      fb_attack_spritesheet_transparent_10: 4673046432170313827
+      fb_attack_spritesheet_transparent_11: -6263519495381528005
+      fb_attack_spritesheet_transparent_12: -2982937267742498617
+      fb_attack_spritesheet_transparent_13: -1885773674412571112
+      fb_attack_spritesheet_transparent_14: -3165318050743432556
+      fb_attack_spritesheet_transparent_2: -2249154599870159083
+      fb_attack_spritesheet_transparent_3: 6421098365598274124
+      fb_attack_spritesheet_transparent_4: -2850675020804659231
+      fb_attack_spritesheet_transparent_5: -7295378768771217015
+      fb_attack_spritesheet_transparent_6: 971197607287987653
+      fb_attack_spritesheet_transparent_7: -2868207149366636278
+      fb_attack_spritesheet_transparent_8: 8957614555428709397
+      fb_attack_spritesheet_transparent_9: 2967666024665215792
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

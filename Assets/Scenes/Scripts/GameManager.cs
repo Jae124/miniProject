@@ -51,7 +51,7 @@ public class GameManager : MonoBehaviour
 
             // Access a public variable or property (less ideal than using methods)
             int difficulty = lm.GetCurrentDifficulty(); // Use a getter method preferably
-            // int difficulty = LevelManager.Instance.stageDifficultyLevel; // Direct access if public
+            //int difficulty = LevelManager.Instance.stageDifficultyLevel; // Direct access if public
             Debug.Log("GameManager fetched difficulty from LevelManager: " + difficulty);
             // Ensure Time Scale is normal at the start
             Time.timeScale = 1f;
