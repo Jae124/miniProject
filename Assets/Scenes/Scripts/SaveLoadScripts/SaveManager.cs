@@ -26,6 +26,8 @@ public class SaveManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
         saveFilePath = Path.Combine(Application.persistentDataPath, "playerProgress_v1.json"); // Added version just in case
         LoadGame();
+
+        CharacterDatabase.Initialize(); //! I think this should happen after loadgame, but not 100% sure
     }
 
     void Update()
