@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement; // Optional: Add later for Restart functionality
 using System.Collections.Generic;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,25 +18,31 @@ public class GameManager : MonoBehaviour
     public Health playerBaseHealth; // Assign in Inspector
 
     [Tooltip("Assign the Enemy Base GameObject here.")]
-    public Health enemyBaseHealth; // Assign in Inspector
-
-    [Header("UI Panels")] // We'll add these fields now for Task 13
-    [Tooltip("Assign the 'You Win' UI Panel GameObject here.")]
-    public GameObject youWinPanel;
-
-    [Tooltip("Assign the 'You Lose' UI Panel GameObject here.")]
-    public GameObject youLosePanel;
+    public Health enemyBaseHealth; // Assign in Inspector    
 
     [Header("Post-Stage UI")]
     [SerializeField] private GameObject postStagePanel; // Assign the panel you just created
     [SerializeField] private TMPro.TextMeshProUGUI outcomeText; // Assign the "Victory!"/"Defeat!" text element
     [SerializeField] private Button nextStageButton; 
+    [SerializeField] private Button retryButton;
+    [SerializeField] private Button stageSelectButton;
+
+    [Header("Post-Stage Appearance")]
+    [Tooltip("Background color for the panel when the player wins.")]
+    [SerializeField] private Color winBackgroundColor = Color.green; // Default green
+    [Tooltip("Background color for the panel when the player loses.")]
+    [SerializeField] private Color loseBackgroundColor = Color.red; // Default red
+    [Tooltip("Reference to the Image component on the PostStagePanel for background color.")]
+    [SerializeField] private Image postStagePanelBackground; // Assign the Panel's Image component here
 
     [Header("Scene Configuration")]
     [Tooltip("Exact name of the Stage Select scene file")]
     [SerializeField] private string stageSelectSceneName = "StageSelectScene";
     [Tooltip("OPTIONAL: Manually define next stage scene name if not using naming convention")]
     [SerializeField] private string nextStageSceneNameOverride = "";
+
+    private int currentStageDifficulty;
+    private const string HighestLevelCompletedKey = "HighestStageCompleted";
 
     // --- Singleton Pattern (Recommended for easy access) ---
     public static GameManager Instance { get; private set; }
@@ -82,32 +89,9 @@ public class GameManager : MonoBehaviour
         }
 
         // Ensure panels are initially off (safety check)
-        if (youWinPanel != null) youWinPanel.SetActive(false);
-        if (youLosePanel != null) youLosePanel.SetActive(false);
         if(postStagePanel != null) postStagePanel.SetActive(false);
     }
     // --- End Singleton ---
-
-    void Update()
-    {
-        // Don't check health if the game is already over
-        if (isGameOver) return;
-
-        // Check win/loss conditions (can be done here or triggered by Health.Die())
-        // Let's have Health.Die() trigger it for cleaner event-driven logic.
-        // See Task 13 modification to Health.cs
-
-        /* Alternative check directly in Update (less recommended):
-        if (playerBaseHealth != null && playerBaseHealth.CurrentHealth <= 0)
-        {
-            GameOver(false); // Player base destroyed = player loses
-        }
-        else if (enemyBaseHealth != null && enemyBaseHealth.CurrentHealth <= 0)
-        {
-            GameOver(true); // Enemy base destroyed = player wins
-        }
-        */
-    }
 
     /// <summary>
     /// Called when the game ends (either win or lose).
@@ -132,7 +116,8 @@ public class GameManager : MonoBehaviour
         // For now, Time.timeScale = 0 is fine for the MVP.
 
         // --- Activate UI Panels (Moved from direct call here to Awake/Inspector link) ---
-        ActivateGameOverPanel(playerWon);
+        //ActivateGameOverPanel(playerWon);
+        ShowPostStageScreen(playerWon);
     }
 
     private void ShowPostStageScreen(bool didWin)
@@ -151,17 +136,45 @@ public class GameManager : MonoBehaviour
             outcomeText.text = didWin ? "Victory!" : "Defeat!";
         }
 
+        // 2. Set Panel Background Color
+        if (postStagePanelBackground != null)
+        {
+            postStagePanelBackground.color = didWin ? winBackgroundColor : loseBackgroundColor;
+        }
+        else
+        {
+            Debug.LogWarning("Post Stage Panel Background Image reference not set in GameManager!");
+        }
+
         // --- Configure Next Stage Button ---
         if (nextStageButton != null)
         {
-            // Check if the player won AND if there IS a next stage to go to
-            bool canProceed = didWin && CheckIfNextStageExists(); // Implement CheckIfNextStageExists
+            if (didWin) // Only potentially enable Next Stage button if player WON
+            {
+                int highestCompleted = PlayerPrefs.GetInt(HighestLevelCompletedKey, 0);
+                // Check if the *next* level (current + 1) is unlocked or is the one just completed
+                // (It's unlocked if highestCompleted >= currentDifficulty)
+                bool nextStageUnlocked = highestCompleted >= currentStageDifficulty;
 
-            nextStageButton.interactable = canProceed;
+                // Also need to check if a "next stage" actually exists
+                bool nextStageExists = CheckIfNextStageExists(currentStageDifficulty + 1);
 
-            // Optional: Change color if disabled
-            // Image nextButtonImage = nextStageButton.GetComponent<Image>();
-            // if(nextButtonImage != null) nextButtonImage.color = canProceed ? Color.white : Color.grey;
+                // Enable if won, next stage exists, and next stage is unlocked (already beaten or just beaten this one)
+                bool canProceed = nextStageExists && nextStageUnlocked;
+
+                nextStageButton.interactable = canProceed;
+                lm.StageWon();
+                 // Optional: Visually hide it entirely if it doesn't exist?
+                 // nextStageButton.gameObject.SetActive(nextStageExists);
+            }
+            else // Player LOST
+            {
+                // Always disable "Next Stage" button on loss
+                nextStageButton.interactable = false;
+
+                 // Optional: Visually hide it?
+                 // nextStageButton.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -241,29 +254,11 @@ public class GameManager : MonoBehaviour
          // return ""; // Not found
     }
 
-
-    // Helper method to activate the correct panel
-    private void ActivateGameOverPanel(bool playerWon)
+    private bool CheckIfNextStageExists(int nextLevel)
     {
-         if (playerWon)
-        {
-            if (youWinPanel != null)
-            {
-                Debug.Log("Activating Win Panel");
-                youWinPanel.SetActive(true);
-                lm.StageWon();
-            }
-             else Debug.LogError("Win Panel not assigned to GameManager!");
-        }
-        else
-        {
-            if (youLosePanel != null)
-            {
-                Debug.Log("Activating Lose Panel");
-                youLosePanel.SetActive(true);
-            }
-             else Debug.LogError("Lose Panel not assigned to GameManager!");
-        }
+        // TODO: Implement check based on your total number of difficulty levels
+        int maxDifficultyLevels = 5; // Example
+        return nextLevel <= maxDifficultyLevels;
     }
 
 
